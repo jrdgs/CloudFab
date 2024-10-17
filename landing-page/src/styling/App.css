@@ -1,0 +1,78 @@
+/* App.css */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.AppBackground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111 !important;
+  text-align: center;
+}
+
+.AppTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.AppIcon {
+  width: 20vh;
+  height: 20vh;
+  max-width: 100px;
+  max-height: 100px;
+  min-width: 40px;
+  min-height: 40px;
+  margin-top: 42px;
+}
+
+.AppTitle {
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 5px;
+}
+
+.AppTitleCloud {
+  color: rgb(5, 146, 240);
+}
+
+.AppText {
+  color: #fff !important;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+#typing-text .future {
+  color: rgb(5, 146, 240);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .AppTitle {
+    font-size: 2.5rem;
+  }
+
+  .AppText {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  .AppIcon {
+    width: 12vw;
+    height: 12vw;
+    max-width: 60px;
+    max-height: 60px;
+  }
+}
