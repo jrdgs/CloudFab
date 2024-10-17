@@ -15,7 +15,7 @@ function App() {
         </h2>
       </div>
       <h1 className="AppText">
-        <TypingText text="the future of machining is here..." />
+        <TypingText text="the future of manufacturing is here..." />
       </h1>
       
       {}
