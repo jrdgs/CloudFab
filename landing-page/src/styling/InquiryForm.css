@@ -1,0 +1,78 @@
+/* InquiryForm.css */
+.InquiryFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; /* Flexible width for smaller screens */
+  max-width: 400px;
+  margin: 0;
+}
+
+.InquiryFormHeader {
+  color: rgb(5, 146, 240);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.InquiryForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+.FormLabel {
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.InquiryForm input, .InquiryForm textarea {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.InquiryForm button {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(5, 146, 240);
+  color: #fff;
+  cursor: pointer;
+  width: 80px;
+  align-self: center;
+}
+
+.InquiryForm button:hover {
+  background-color: rgb(5, 126, 210);
+}
+
+@media (max-width: 600px) {
+  .InquiryFormHeader {
+    font-size: 1rem;
+  }
+
+  .FormLabel {
+    font-size: 0.9rem;
+  }
+
+  .InquiryForm input, .InquiryForm textarea {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .InquiryForm button {
+    font-size: 0.7rem;
+    padding: 4px;
+    width: 70px;
+  }
+}
