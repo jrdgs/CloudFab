@@ -1,0 +1,100 @@
+/* InquiryForm.css */
+.InquiryFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw; /* Flexible width for smaller screens */
+  max-width: 400px;
+  margin: 0;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  padding: 25px;
+  height: 45vh;
+}
+
+.InquiryFormHeader {
+  color: var(--primary-color);
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.InquiryForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+.FormLabel {
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.InquiryForm input, .InquiryForm textarea {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.InquiryForm button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  align-self: center;
+}
+
+.InquiryForm button:hover {
+  background-color: var(--primary-color);
+}
+
+select {
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Add a subtle shadow */
+}
+
+select:hover {
+  background-color: #f1f1f1; /* Slightly darker background on hover */
+}
+
+/* @media (max-width: 600px) {
+  .InquiryFormHeader {
+    font-size: 1rem;
+  }
+
+  .FormLabel {
+    font-size: 0.9rem;
+  }
+
+  .InquiryForm input, .InquiryForm textarea {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .InquiryForm button {
+    font-size: 0.7rem;
+    padding: 4px;
+    width: 70px;
+  }
+} */

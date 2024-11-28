@@ -1,0 +1,15 @@
+.AppTitleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.AppIcon {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.AppTitle {
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+    font-size: inherit;
+}

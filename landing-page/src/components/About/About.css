@@ -1,0 +1,42 @@
+.AboutBackground {
+    background-color: var(--background-color);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    color: white;
+    background-color: var(--background-color);
+    background-image: url('../../images/background.svg');
+    background-repeat: round;
+    background-size: 20vw;
+}
+
+.AboutBackground > h1 {
+    font-weight: 200;
+    color: white;
+    font-size: 50px;
+    padding: 25px 0px;
+    width: 100vw;
+    text-align: center;
+    background-color: black;
+}
+
+.TextTitles {
+    display: flex;
+    font-size: 2em;
+    margin-top: 100px;
+    background-color: var(--background-color);
+    padding: 10px;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.Text {
+    display: flex;
+    font-weight: 600;
+    background-color: var(--background-color);
+    width: 80vw;
+    padding: 25px;
+}

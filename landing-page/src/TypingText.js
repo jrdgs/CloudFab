@@ -5,11 +5,11 @@ import './styling/App.css';
 
 function TypingText({ text }) {
   useEffect(() => {
-    const modifiedText = text.replace("future", "<span class='future'>future</span>");
+    const modifiedText = text.replace("digital", "<span class='future'>digital</span>");
     
     const options = {
       strings: [modifiedText],
-      typeSpeed: 90,
+      typeSpeed: 50,
       loop: false,
       autoInsertCss: true,
       showCursor: true

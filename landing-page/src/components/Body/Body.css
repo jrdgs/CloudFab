@@ -1,0 +1,116 @@
+.AppBackground {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 175vh;
+    background-color: var(--background-color);
+    background-image: url('../../images/background.svg');
+    background-repeat: round;
+    background-size: 20vw;
+}
+  
+.AppTitleCloud {
+    color: var(--primary-color);
+}
+
+.AppText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+    padding: 50px 0px;
+}
+
+.WelcomeText {
+    color: var(--primary-color);
+    font-size: 4rem;
+    background-color: var(--background-color);
+    border-radius: 25px;
+    padding: 40px;
+    width: 30vw;
+}
+
+.WelcomeDigitalText {
+    color: white;
+}
+
+.SecondaryWelcomeText {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 200;
+    background-color: var(--background-color);
+    border-radius: 15px;
+    padding: 40px;
+    width: 25vw;
+    margin-right: 5vw;
+}
+
+.IntroGallery {
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.HomeCard {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    width: 21vw;
+    height: 25vw;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    /* border: 3px solid white; */
+}
+
+.HomeCardText {
+    display: flex;
+    align-items: center;
+    height: 4vw;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.HomeCardImg {
+    width: 21vw;
+    aspect-ratio: 1/1;
+    border-radius: inherit;
+    object-fit: fill;
+    padding: 10px;
+}
+
+.LogoDiv {
+    font-size: 75px;
+    padding-top: 2rem;
+}
+
+.MoneyText {
+    color: var(--primary-color);
+}
+
+#typing-text .future {
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .AppTitle {
+        font-size: 2.5rem;
+    }
+
+    .AppText {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .AppIcon {
+        width: 12vw;
+        height: 12vw;
+        max-width: 60px;
+        max-height: 60px;
+    }
+}
