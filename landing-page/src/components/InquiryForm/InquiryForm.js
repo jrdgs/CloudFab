@@ -17,12 +17,6 @@ function InquiryForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Form submitted successfully!');
-    setFormData({ name: '', email: '', profession: 'hs-student', message: '' });
-  };
-
   return (
     <div className="InquiryFormContainer">
       <h3 className="InquiryFormHeader">
@@ -32,8 +26,7 @@ function InquiryForm() {
         className="InquiryForm" 
         name="contact" 
         method="POST" 
-        data-netlify="true" 
-        onSubmit={handleSubmit}
+        data-netlify="true"
       >
         <input type="hidden" name="form-name" value="contact" />
 
