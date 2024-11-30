@@ -9,6 +9,9 @@ function InquiryForm() {
     message: '',
   });
 
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -17,16 +20,41 @@ function InquiryForm() {
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        setSuccessMessage('Inquiry email submitted successfully. Thank you!');
+        setErrorMessage('');
+        setTimeout(() => setSuccessMessage(''), 5000);
+        setFormData({ name: '', email: '', profession: 'hs-student', message: '' });
+      })
+      .catch((error) => {
+        setErrorMessage(`There was an error submitting the form: ${error.message}`);
+        setSuccessMessage('');
+        setTimeout(() => setErrorMessage(''), 5000);
+      });
+  };
+
   return (
     <div className="InquiryFormContainer">
-      <h3 className="InquiryFormHeader">
-        Interested? Get in touch with us
-      </h3>
-      <form 
-        className="InquiryForm" 
-        name="contact" 
-        method="POST" 
+      <h3 className="InquiryFormHeader">Interested? Get in touch with us</h3>
+      {successMessage && <div className="SuccessMessage">{successMessage}</div>}
+      {errorMessage && <div className="ErrorMessage">{errorMessage}</div>}
+      <form
+        className="InquiryForm"
+        name="contact"
+        method="POST"
         data-netlify="true"
+        onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
 

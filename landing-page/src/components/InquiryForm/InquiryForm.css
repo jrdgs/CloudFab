@@ -34,18 +34,19 @@
 }
 
 .InquiryForm input,
-.InquiryForm textarea {
+.InquiryForm textarea,
+.InquiryForm select {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  color: inherit;
+  line-height: 1.5;
   padding: 8px;
   margin-top: 5px;
   border-radius: 5px;
   border: none;
-  font-size: 1rem;
   width: 100%;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 80px; 
+  box-sizing: border-box; 
+  background-color: #fff;
 }
 
 .InquiryForm button {
@@ -81,4 +82,24 @@ select:focus {
 
 select:hover {
   background-color: #f1f1f1;
+}
+
+.SuccessMessage,
+.ErrorMessage {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-family: "DM Sans", sans-serif;
+}
+
+.SuccessMessage {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.ErrorMessage {
+  background-color: #f44336;
+  color: #fff;
 }
