@@ -38,7 +38,7 @@
 .InquiryForm select {
   font-family: "DM Sans", sans-serif;
   font-size: 1rem;
-  color: inherit;
+  color: #000;
   line-height: 1.5;
   padding: 8px;
   margin-top: 5px;
