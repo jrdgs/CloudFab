@@ -14,7 +14,7 @@ export default function Navbar(){
                 <li><a href="company">Company</a></li>
                 <li><a href="contact">Contact</a></li>
             </ul>
-            <button className="login-button">Login</button>
+            <button className="waitlist-button">Join the Waitlist</button>
       </nav>
     )
 }

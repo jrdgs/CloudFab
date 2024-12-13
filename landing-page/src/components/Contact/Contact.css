@@ -8,9 +8,9 @@
     padding-top: 50px;
     color: white;
     background-color: var(--background-color);
-    background-image: url('../../images/background.svg');
+    /* background-image: url('../../images/background.svg');
     background-repeat: round;
-    background-size: 20vw;
+    background-size: 20vw; */
 }
 
 .ContactBackground > h1 {

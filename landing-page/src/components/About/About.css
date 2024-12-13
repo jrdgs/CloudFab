@@ -7,9 +7,9 @@
     padding-top: 50px;
     color: white;
     background-color: var(--background-color);
-    background-image: url('../../images/background.svg');
+    /* background-image: url('../../images/background.svg');
     background-repeat: round;
-    background-size: 20vw;
+    background-size: 20vw; */
 }
 
 .AboutBackground > h1 {
@@ -20,12 +20,12 @@
     width: 100vw;
     text-align: center;
     background-color: black;
+    margin-bottom: 50px;
 }
 
 .TextTitles {
     display: flex;
     font-size: 2em;
-    margin-top: 100px;
     background-color: var(--background-color);
     padding: 10px;
     width: 80vw;
@@ -35,8 +35,9 @@
 
 .Text {
     display: flex;
-    font-weight: 600;
+    font-weight: 300;
     background-color: var(--background-color);
     width: 80vw;
     padding: 25px;
+    margin-bottom: 75px;
 }

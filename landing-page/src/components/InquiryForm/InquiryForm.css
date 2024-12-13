@@ -1,14 +1,14 @@
+/* InquiryForm.css */
 .InquiryFormContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50vw;
+  width: 50vw; /* Flexible width for smaller screens */
   max-width: 400px;
   margin: 0;
   background-color: var(--background-color);
   border-radius: 10px;
   padding: 25px;
-  height: 45vh;
 }
 
 .InquiryFormHeader {
@@ -33,20 +33,13 @@
   margin: 10px 0px;
 }
 
-.InquiryForm input,
-.InquiryForm textarea,
-.InquiryForm select {
-  font-family: "DM Sans", sans-serif;
-  font-size: 1rem;
-  color: #000;
-  line-height: 1.5;
+.InquiryForm input, .InquiryForm textarea {
   padding: 8px;
   margin-top: 5px;
   border-radius: 5px;
   border: none;
+  font-size: 1rem;
   width: 100%;
-  box-sizing: border-box; 
-  background-color: #fff;
 }
 
 .InquiryForm button {
@@ -77,29 +70,30 @@ select {
 
 select:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Add a subtle shadow */
 }
 
 select:hover {
-  background-color: #f1f1f1;
+  background-color: #f1f1f1; /* Slightly darker background on hover */
 }
 
-.SuccessMessage,
-.ErrorMessage {
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  font-family: "DM Sans", sans-serif;
-}
+/* @media (max-width: 600px) {
+  .InquiryFormHeader {
+    font-size: 1rem;
+  }
 
-.SuccessMessage {
-  background-color: #4caf50;
-  color: #fff;
-}
+  .FormLabel {
+    font-size: 0.9rem;
+  }
 
-.ErrorMessage {
-  background-color: #f44336;
-  color: #fff;
-}
+  .InquiryForm input, .InquiryForm textarea {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .InquiryForm button {
+    font-size: 0.7rem;
+    padding: 4px;
+    width: 70px;
+  }
+} */

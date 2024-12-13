@@ -7,9 +7,9 @@
     align-items: center;
     padding-top: 50px;
     background-color: var(--background-color);
-    background-image: url('../../images/background.svg');
+    /* background-image: url('../../images/background.svg');
     background-repeat: round;
-    background-size: 20vw;
+    background-size: 20vw; */
 }
 
 .CompanyBackground > h1 {

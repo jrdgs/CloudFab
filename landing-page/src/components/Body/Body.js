@@ -1,7 +1,6 @@
 // Body.js
 import React from 'react';
 import './Body.css';
-import InquiryForm from '../InquiryForm/InquiryForm';
 import CADModel from '../../images/CADModel.png';
 import CADMachine from '../../images/CADMachine.png';
 import CADPart from '../../images/CADPart.png';
@@ -30,7 +29,6 @@ export default function Body () {
                     <img className='HomeCardImg' src={CADPart} alt=''></img>
                 </div>
             </div>
-            <InquiryForm />
         </div>
     )
 }

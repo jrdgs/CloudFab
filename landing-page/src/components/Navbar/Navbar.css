@@ -24,6 +24,7 @@
     background-color: var(--navbar-color);
     cursor: pointer;
     padding: 5px 0;
+    margin-left: 5vw;
     font-size: 25px;
     border: 0;
     color: inherit;
@@ -70,16 +71,23 @@
     transform: scale(1,1);
 }
 
-.login-button {
+.waitlist-button {
     color: white;
     padding: 10px 20px;
     margin-right: 10px;
-    background-color: var(--primary-color);
+    background-color: var(--navbar-color);
+    border-color: var(--primary-color);
     border-radius: 7px;
     box-shadow: 0px;
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
     height: 35px;
-    width: 100px;
+    width: 10vw;
+    margin-right: 5vw;
+}
+
+.waitlist-button:hover {
+    background-image: linear-gradient(0deg, rgba(5,146,240,1) 0%, rgba(0,0,0,1) 20%);
+    
 }
