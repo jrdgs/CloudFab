@@ -10,8 +10,8 @@ export default function Navbar(){
                 <LogoName />
             </a>
             <ul className="navbar-links">
+                <li><a href="company">How it Works</a></li>
                 <li><a href="about">About</a></li>
-                <li><a href="company">Company</a></li>
                 <li><a href="contact">Contact</a></li>
             </ul>
             <button className="waitlist-button">Join the Waitlist</button>

@@ -4,8 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     background-color: var(--background-color);
-    /*background-image: url('../../images/background.svg');
-    background-repeat: round;*/
+    width: 100vw;
 }
   
 .AppTitleCloud {
@@ -44,11 +43,40 @@
     margin-right: 5vw;
 }
 
+.UICards {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+.MyFilesUI, .EditPageUI {
+    display: flex;
+    width: 39vw;
+    aspect-ratio: 2880/2140;
+}
+
+.MyFilesUIImage, .EditPageUIImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.SectionTitle {
+    color: white;
+    font-size: 3rem;
+    padding-top: 200px;
+    padding-inline: 50px;
+    border-bottom: 1px solid white;
+}
+
 .IntroGallery {
     display: flex;
-    width: 70vw;
+    width: 80vw;
     justify-content: space-between;
+    padding-top: 25px;
     padding-bottom: 50px;
+    font-weight: 600;
 }
 
 .HomeCard {
@@ -70,7 +98,7 @@
     color: white;
     font-size: 1.5rem;
     text-align: center;
-    font-weight: 600;
+    font-weight: 200;
 }
 
 .HomeCardImg {

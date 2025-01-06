@@ -4,23 +4,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
     color: white;
     background-color: var(--background-color);
-    /* background-image: url('../../images/background.svg');
-    background-repeat: round;
-    background-size: 20vw; */
 }
 
 .AboutBackground > h1 {
     font-weight: 200;
-    color: white;
-    font-size: 50px;
-    padding: 25px 0px;
-    width: 100vw;
     text-align: center;
     background-color: black;
-    margin-bottom: 50px;
+    color: white;
+    font-size: 3rem;
+    padding-inline: 50px;
+    border-bottom: 1px solid white;
 }
 
 .TextTitles {
@@ -39,5 +34,5 @@
     background-color: var(--background-color);
     width: 80vw;
     padding: 25px;
-    margin-bottom: 75px;
+    text-align: center; /* Added this line */
 }
