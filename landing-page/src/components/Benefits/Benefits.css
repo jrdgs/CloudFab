@@ -1,0 +1,34 @@
+@import '../../styling/Colors.css';
+
+.BenefitsLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+}
+
+.BenefitCard {
+    background-color: var(--box-color);
+    width: 34vw;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    white-space: normal;
+    margin-top: 2vw;
+}
+
+.BenefitCard > h1 {
+    width: inherit;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.BenefitCard > p {
+    padding-left: 10px;
+    padding-top: 10px;
+}

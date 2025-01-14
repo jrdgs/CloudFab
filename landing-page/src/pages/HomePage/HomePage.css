@@ -1,0 +1,21 @@
+@import '../../styling/Colors.css';
+
+.BackgroundContainer {
+    padding-top: 100px;
+    background-color: var(--background-color);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: var(--background-color);
+}
+
+.BackgroundContainer > h1 {
+    font-weight: 200;
+    background-color: black;
+    font-size: 3rem;
+    border-bottom: 1px solid white;
+    color: var(--primary-color);
+    width: 80vw;
+}
