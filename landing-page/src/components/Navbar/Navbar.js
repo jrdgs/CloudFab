@@ -11,8 +11,8 @@ export default function Navbar(){
             </a>
             <ul className="navbar-links">
                 <li><a href="#howitworks">How it Works</a></li>
+                <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#about">About Us</a></li>
-                {/* <li><a href="contact">Contact</a></li> */}
             </ul>
             <button className="waitlist-button">Join the Waitlist</button>
       </nav>

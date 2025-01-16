@@ -1,7 +1,6 @@
 @import '../../styling/Colors.css';
 
 .BackgroundContainer {
-    padding-top: 100px;
     background-color: var(--background-color);
     width: 100vw;
     display: flex;
@@ -12,9 +11,10 @@
 }
 
 .BackgroundContainer > h1 {
+    padding-top: 100px;
     font-weight: 200;
     background-color: black;
-    font-size: 3rem;
+    font-size: 2.75rem;
     border-bottom: 1px solid white;
     color: var(--primary-color);
     width: 80vw;

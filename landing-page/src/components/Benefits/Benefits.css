@@ -7,13 +7,14 @@
     width: 70vw;
 }
 
+.PaddingTop {
+    padding-top: 100px;
+}
+
 .BenefitCard {
-    background-color: var(--box-color);
+    background-image: linear-gradient(0deg, var(--primary-color) -300%, var(--box-color) 50%);
     width: 34vw;
     border-radius: 10px;
-    border-color: white;
-    border-width: 1px;
-    border-style: solid;
     height: 125px;
     display: flex;
     flex-direction: column;
