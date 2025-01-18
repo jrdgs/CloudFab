@@ -6,17 +6,12 @@
     align-items: center;
     justify-content: center;
 }
-
-.Text {
-    display: flex;
-    font-weight: 300;
-    width: 80vw;
-    padding: 25px;
-    text-align: center; /* Added this line */
-}
-
 .Collapsibles {
     width: 60vw;
+}
+
+.CollapsibleText {
+    color: var(--second-text-color);
 }
 
 .Collapsible {
