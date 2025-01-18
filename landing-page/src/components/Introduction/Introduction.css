@@ -16,7 +16,8 @@
     background-color: var(--background-color);
     border-radius: 25px;
     padding: 40px;
-    width: 30vw;
+    width: 35vw;
+    font-weight: 800;
 }
 
 .WelcomeDigitalText {
@@ -51,8 +52,6 @@
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 0 50px 1em rgba(5, 146, 240, 0.15);
-    /* margin: 4em;
-    padding: 1em; */
 }
 
 .LogoDiv {
