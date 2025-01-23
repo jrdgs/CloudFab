@@ -11,7 +11,40 @@ import '../../pages/HomePage/HomePage.css';
 export default function HowItWorks () {
     return ( 
         <div className='BackgroundContainer'>
-            <h1 id="howitworks">How it works</h1>
+            <div className='UIContainer'>   
+                    <div className='LeftSide'>
+                        <h1>How it works</h1>
+                    </div>
+                    <div className='RightSide'>
+                        <div className='StepCard'>
+                            <div className='Number'>1</div>
+                            <div className='StepText'>yap yap yap yap yap yap </div>
+                        </div>yap yap yap yap yap yap 
+                        <div className='StepCard'>
+                            <div className='Number'>2</div>
+                            <div className='StepText'>yap yap yap yap yap yap </div>
+                        </div>
+                        <div className='StepCard'>
+                            <div className='Number'>3</div>
+                            <div className='StepText'>yap yap yap yap yap yap </div>
+                        </div>
+                        <div className='StepCard'>
+                            <div className='Number'>4</div>
+                            <div className='StepText'>yap yap yap yap yap yap </div>
+                        </div>
+                        <div className='StepCard'>
+                            <div className='Number'>5</div>
+                            <div className='StepText'>yap yap yap yap yap yap </div>
+                        </div>
+                    </div>
+            </div>
+
+
+
+
+
+
+            {/* <h1 id="howitworks">How it works</h1>
 
             <div className='IntroGallery'>
                 <div className='HomeCard'>
@@ -40,7 +73,15 @@ export default function HowItWorks () {
                 <p>Path your tools</p>
                 <p>Simulate your job</p>
                 <p>Submit for production</p>
-            </div>
+            </div> */}
+
+
+
+
+
+
+
+
         </div>
     )
 }
