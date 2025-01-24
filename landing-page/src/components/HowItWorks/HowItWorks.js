@@ -18,23 +18,28 @@ export default function HowItWorks () {
                     <div className='RightSide'>
                         <div className='StepCard'>
                             <div className='Number'>1</div>
-                            <div className='StepText'>yap yap yap yap yap yap </div>
-                        </div>yap yap yap yap yap yap 
+                            <div className='StepText'>Upload your model </div>
+                            <div className='SecondaryStepText'>as a STEP from your preffered CAD software</div>
+                        </div>
                         <div className='StepCard'>
                             <div className='Number'>2</div>
-                            <div className='StepText'>yap yap yap yap yap yap </div>
+                            <div className='StepText'>Choose your stock </div>
+                            <div className='SecondaryStepText'>from CloudFabs available materials</div>
                         </div>
                         <div className='StepCard'>
                             <div className='Number'>3</div>
-                            <div className='StepText'>yap yap yap yap yap yap </div>
+                            <div className='StepText'>Fixture your material </div>
+                            <div className='SecondaryStepText'>using CloudFabs proprietary software</div>
                         </div>
                         <div className='StepCard'>
                             <div className='Number'>4</div>
-                            <div className='StepText'>yap yap yap yap yap yap </div>
+                            <div className='StepText'>Programs your tool paths </div>
+                            <div className='SecondaryStepText'>using industry standard pathing and operations</div>
                         </div>
                         <div className='StepCard'>
                             <div className='Number'>5</div>
-                            <div className='StepText'>yap yap yap yap yap yap </div>
+                            <div className='StepText'>Save money on your parts </div>
+                            <div className='SecondaryStepText'>and gets your parts made fast</div>
                         </div>
                     </div>
             </div>
