@@ -20,24 +20,7 @@
     font-weight: 800;
     opacity: 0;
     transform: translateY(20px);
-    animation: slideUp 3s ease-out forwards;
-}
-
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    width: 35vw;
-    font-weight: 800;
-}
-
-.WelcomeDigitalText {
-    color: white;
+    animation: slideUp 0.7s ease-out forwards;
 }
 
 .SecondaryWelcomeText {
@@ -49,6 +32,13 @@
     margin-right: 5vw;
     font-weight: 500;
     font-style: italic;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.7s ease-out 0.35s forwards;
+}
+
+.WelcomeDigitalText {
+    color: white;
 }
 
 .UICards {
@@ -63,12 +53,26 @@
     aspect-ratio: 2880/2140;
 }
 
-.MyFilesUIImage, .EditPageUIImage {
+.MyFilesUIImage {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 0 50px 1em rgba(5, 146, 240, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.7s ease-out 0.7s forwards;
+}
+
+.EditPageUIImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 1em rgba(5, 146, 240, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.7s ease-out 0.7s forwards;
 }
 
 .LogoDiv {
@@ -78,6 +82,17 @@
 
 .MoneyText {
     color: var(--primary-color);
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 600px) {
