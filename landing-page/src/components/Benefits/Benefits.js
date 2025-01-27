@@ -8,31 +8,38 @@ export default function Benefits () {
             <div className="PaddingTop">
                 <div className="BenefitsLine">
                     <div className="BenefitCard">
-                        <h1>Save Money</h1>
-                        <p>Save up to 50% compared to other online machine shops by programming your own job.</p>
+                        <div className='front' >
+                            Save Money
+                        </div>
+                        <div className='back'>
+                            Save up to 50% compared to other online machine shops by programming your own job.
+                        </div>
                     </div>
                     <div className="BenefitCard">
-                        <h1>Full Control</h1>
-                        <p>Take full control of your part from the stock, to the fixturing, to the pathing.</p>
+                        <div className='front' >
+                            Full Control
+                        </div>    
+                        <div className='back' >
+                            Take full control of your part from the stock, to the fixturing, to the pathing.
+                        </div>
                     </div>
                 </div>
                 <div className="BenefitsLine">
                     <div className="BenefitCard">
-                        <h1>Instant Feedback</h1>
-                        <p>Get instant feedback on the manufacturability of your design, how much it will cost, and what is driving those</p>
+                        <div className='front' >
+                            Instant Feedback
+                        </div>
+                        <div className='back' >
+                            Get instant feedback on the manufacturability of your design, how much it will cost, and what is driving those costs.
+                        </div>
                     </div>
                     <div className="BenefitCard">
-                        <h1>Quick Turnaround</h1>
-                        <p>Get your parts fast with on demand, automated manufacturing capability</p>
-                    </div>
-                </div>
-
-                <div className="card">
-                    <div className='front' >
-                        Save Money
-                    </div>
-                    <div className='back'>
-                        Save up to 50% compared to other online machine shops by programming your own job.
+                        <div className='front' >
+                            Quick Turnaround
+                        </div>
+                        <div className='back' >
+                            Get your parts fast with on demand, automated manufacturing capability.
+                        </div>
                     </div>
                 </div>
             </div>
