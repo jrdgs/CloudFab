@@ -26,6 +26,15 @@ export default function Benefits () {
                         <p>Get your parts fast with on demand, automated manufacturing capability</p>
                     </div>
                 </div>
+
+                <div className="card">
+                    <div className='front' >
+                        Save Money
+                    </div>
+                    <div className='back'>
+                        Save up to 50% compared to other online machine shops by programming your own job.
+                    </div>
+                </div>
             </div>
         </div>
     )
