@@ -2,58 +2,49 @@
 import React from 'react';
 import './HowItWorks.css';
 import '../../pages/HomePage/HomePage.css';
-import CADModel from '../../images/CADSolidworks.png';
-import CADMachine from '../../images/CADMachine.png';
-import CADPart from '../../images/CADPart.png';
-import ArrowImg from '..//../images/right-arrow.svg';
-import '../../pages/HomePage/HomePage.css';
 
-export default function HowItWorks () {
-    return ( 
-        <div className='BackgroundContainer'>
-            <div className='UIContainer'>   
-                <div className='LeftSide'>
+export default function HowItWorks() {
+    return (
+        <div className="BackgroundContainer">
+            <div className="UIContainer">
+                <div className="LeftSide">
                     <h1>How it works</h1>
-                    {/* <img className='HomeCardImg' src={CADMachine} alt=''></img> */}
                 </div>
-                <div className='RightSide'>
-                    <div className='StepCard'>
-                        <div className='StepCardLeft'>
-                            <div className='Number'>1</div>
-                            <div className='StepText'>Upload your model </div>
+                <div className="RightSide">
+                    <div className="timeline">
+                        <div className="timeline-item left">
+                            <div className="timeline-content">
+                                <h2>Upload your model</h2>
+                                <p>as a STEP from your preferred CAD software</p>
+                            </div>
                         </div>
-                        <div className='SecondaryStepText'>as a STEP from your preffered CAD software</div>
-                    </div>
-                    <div className='StepCard'>
-                        <div className='StepCardLeft'>
-                            <div className='Number'>2</div>
-                            <div className='StepText'>Choose your stock </div>
+                        <div className="timeline-item right">
+                            <div className="timeline-content">
+                                <h2>Choose your stock</h2>
+                                <p>from CloudFabs available materials</p>
+                            </div>
                         </div>
-                        <div className='SecondaryStepText'>from CloudFabs available materials</div>
-                    </div>
-                    <div className='StepCard'>
-                        <div className='StepCardLeft'>
-                            <div className='Number'>3</div>
-                            <div className='StepText'>Fixture your material </div>
+                        <div className="timeline-item left">
+                            <div className="timeline-content">
+                                <h2>Fixture your material</h2>
+                                <p>using CloudFabs proprietary software</p>
+                            </div>
                         </div>
-                        <div className='SecondaryStepText'>using CloudFabs proprietary software</div>
-                    </div>
-                    <div className='StepCard'>
-                        <div className='StepCardLeft'>
-                            <div className='Number'>4</div>
-                            <div className='StepText'>Programs your tool paths </div>
+                        <div className="timeline-item right">
+                            <div className="timeline-content">
+                                <h2>Program your tool paths</h2>
+                                <p>using industry-standard pathing</p>
+                            </div>
                         </div>
-                        <div className='SecondaryStepText'>using industry standard pathing</div>
-                    </div>
-                    <div className='StepCard'>
-                        <div className='StepCardLeft'>
-                            <div className='Number'>5</div>
-                            <div className='StepText'>Save money on your parts </div>
+                        <div className="timeline-item left">
+                            <div className="timeline-content">
+                                <h2>Save money on your parts</h2>
+                                <p>and get your parts made fast</p>
+                            </div>
                         </div>
-                        <div className='SecondaryStepText'>and gets your parts made fast</div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }

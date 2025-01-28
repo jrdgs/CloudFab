@@ -2,10 +2,13 @@
 import React from 'react';
 import './Benefits.css';
 
-export default function Benefits () {
-    return ( 
+export default function Benefits() {
+    return (
         <div className="BackgroundContainer" id="benefits">
             <div className="PaddingTop">
+                <div className="Header">
+                    <h1>Why Us?</h1>
+                </div>
                 <div className="BenefitsLine">
                     <div className="BenefitCard">
                         <div className='front' >
@@ -18,7 +21,7 @@ export default function Benefits () {
                     <div className="BenefitCard">
                         <div className='front' >
                             Full Control
-                        </div>    
+                        </div>
                         <div className='back' >
                             Take full control of your part from the stock, to the fixturing, to the pathing.
                         </div>

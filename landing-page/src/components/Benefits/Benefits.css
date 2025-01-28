@@ -7,6 +7,23 @@
     width: 70vw;
 }
 
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70vw;
+  text-align: center;
+}
+
+.Header > h1 {
+  padding-left: 10px;
+  width: inherit;
+  padding-top: 10px;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 4rem;
+}
+
 .PaddingTop {
     padding-top: 100px;
 }
@@ -77,19 +94,19 @@
     z-index: -1;
   }
   .BenefitCard:hover & {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
   }
   .BenefitCard:nth-child(even):hover & {
-    transform: rotateY(-180deg);
+    transform: rotateX(-180deg);
   }
 }
 
 .back {
   background: linear-gradient(0deg, var(--primary-color) -300%, var(--box-color) 20%);
-  transform: rotateY(-180deg);
+  transform: rotateX(-180deg);
   padding: 0 2em;
   
   .BenefitCard:hover & {
-    transform: rotateY(0deg);
+    transform: rotateX(0deg);
   }
 }
