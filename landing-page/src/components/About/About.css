@@ -2,7 +2,7 @@
 
 .AccordionClass {
     padding-top: 10px;
-    width: 50vw;
+    width: 45vw;
     background-color: var(--background-color) !important;
 }
 
@@ -25,72 +25,33 @@
 
 
 
-.UIContainer {
+.AboutUIContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 75vw;
-    padding-top: 100px;
-    background-color: gray;
+    padding-top: 150px;
+    /* background-color: gray; */
 }
 
-.LeftSide{
+.AboutLeftSide{
     display: flex;
-    width: 50vw;
-    height: 500px;
+    width: 45vw;
+    flex-direction: column;
 
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
-.RightSide{
+.AboutRightSide{
+    display: flex;
     width: 25vw;
     flex-direction: column;
-    justify-content: start;
-    background-color: red;
-}
-
-.StepCard {
-    display: flex;
-    height: 100px;
-    width: inherit;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.StepCard:hover .SecondaryStepText {
-    color: var(--second-text-color);
-    transition-duration: 300ms;
-}
-
-.Number {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    height: 60px;
-    width: 80px;
-    font-size: 2.5rem;
-    font-weight: 200;
-    background-color: var(--primary-color);
-    border-radius: 40px;
-    align-items: center;
-    font-weight: 800;
-    text-align: center;
+    /* background-color: red; */
+    height: 600px;
 }
 
-.StepText {
-    height: 60px;
-    line-height: 60px;
-    font-size: 1.75rem;
-    padding-left: 2vw;
-    font-weight: 600;
-}
-
-.SecondaryStepText {
-    color: var(--background-color);
-    padding-left: 25px;
-}
-
-.RightSide > h1 {
+.AboutRightSide > h1 {
     font-weight: 500;
     font-size: 4rem;
     border-top: 1px solid white;
@@ -99,9 +60,5 @@
     width: 20vw;
     text-align: center;
     padding-bottom: 50px;
-    background-color: green;
-}
-
-.StepCardLeft {
-    display: flex;
+    /* background-color: green; */
 }

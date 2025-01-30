@@ -10,8 +10,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export default function About() {
   return (
     <div className="BackgroundContainer" id="about">
-        <div className="UIContainer">
-            <div className='LeftSide'>
+        <div className="AboutUIContainer">
+            <div className='AboutLeftSide'>
                 <Accordion className='AccordionClass'>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} className='AccordionSummaryClass'>
                         Who are we:
@@ -46,7 +46,7 @@ export default function About() {
                     </AccordionDetails>
                 </Accordion>
             </div>
-            <div className='RightSide'>
+            <div className='AboutRightSide'>
                 <h1>About Us</h1>                           
             </div>
         </div>
