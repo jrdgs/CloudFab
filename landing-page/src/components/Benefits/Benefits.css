@@ -12,7 +12,7 @@
 }
 
 .BenefitCard {
-    background-image: linear-gradient(0deg, var(--primary-color) -300%, var(--box-color) 20%);
+    background-image: inherit;
     width: 34vw;
     border-radius: 10px;
     height: 125px;
@@ -21,6 +21,8 @@
     word-wrap: break-word;
     white-space: normal;
     margin-top: 2vw;
+    cursor: pointer;
+    perspective: 1000px;
 }
 
 .BenefitCard > h1 {
@@ -32,20 +34,6 @@
 .BenefitCard > p {
     padding-left: 10px;
     padding-top: 10px;
-}
-
-.card {
-  color: inherit;
-  cursor: pointer;
-  width: 30vw;
-  height: 10vw;
-  perspective: 1000px;
-  /* @include mobile (800px) { */
-    /* width: calc(50% - 2rem); */
-  /* } */
-  /* @include mobile (500px) { */
-    /* width: 100%; */
-  /* } */
 }
 
 .front,
@@ -69,8 +57,8 @@
 
 .front {
   background-size: cover;
-  background: var(--box-color);
-  /* background-blend-mode: overlay; */
+  background: linear-gradient(0deg, var(--primary-color) -300%, var(--box-color) 20%);
+  background-blend-mode: overlay;
   padding: 2rem;
   font-size: 1.618rem;
   font-weight: 600;
@@ -84,24 +72,24 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, adjust-hue(#ffffff, -20deg), #ffffff);
+    background: linear-gradient(0deg, var(--primary-color) -300%, var(--box-color) 20%);
     opacity: .25;
     z-index: -1;
   }
-  .card:hover & {
+  .BenefitCard:hover & {
     transform: rotateY(180deg);
   }
-  .card:nth-child(even):hover & {
+  .BenefitCard:nth-child(even):hover & {
     transform: rotateY(-180deg);
   }
 }
 
 .back {
-  background: var(--box-color);
+  background: linear-gradient(0deg, var(--primary-color) -300%, var(--box-color) 20%);
   transform: rotateY(-180deg);
   padding: 0 2em;
   
-  .card:hover & {
+  .BenefitCard:hover & {
     transform: rotateY(0deg);
   }
 }
