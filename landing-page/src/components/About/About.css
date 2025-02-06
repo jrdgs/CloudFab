@@ -10,12 +10,13 @@
     font-size: 2em !important;
     background-color: var(--box-color) !important;
     color: white !important;
+    font-family: 'Montserrat', serif !important;
 }
 
 .AccordionDetailsClass {
     color: var(--second-text-color) !important;
     background-color: var(--box-color) !important;
-    border-top: 1px solid white !important;
+    /* border-top: 1px solid white !important; */
 }
 
 
