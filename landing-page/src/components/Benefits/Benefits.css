@@ -74,7 +74,7 @@
 
 .front {
   background-size: cover;
-  background: linear-gradient(0deg, var(--primary-color) -100%, var(--box-color) 45vw);
+  background: linear-gradient(0deg, var(--primary-color) -100%, var(--box-color) 80%);
   background-blend-mode: overlay;
   padding: 2rem;
   font-size: 1.618rem;
