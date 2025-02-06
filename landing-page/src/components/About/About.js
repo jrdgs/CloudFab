@@ -14,7 +14,7 @@ export default function About() {
             <div className='AboutLeftSide'>
                 <Accordion className='AccordionClass'>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} className='AccordionSummaryClass'>
-                        Who are we:
+                        Who we are
                     </AccordionSummary>
                 
                     <AccordionDetails className='AccordionDetailsClass'>
@@ -28,7 +28,7 @@ export default function About() {
             
                 <Accordion className='AccordionClass'>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} className='AccordionSummaryClass'>
-                        What makes us different:
+                        What makes us different
                     </AccordionSummary>
                     <AccordionDetails  className='AccordionDetailsClass'>
                         Other companies will provide parts from a 3D model at a high cost, but we believe that engineers 
@@ -40,7 +40,7 @@ export default function About() {
             
                 <Accordion className='AccordionClass'>
                     <AccordionSummary expandIcon={<ExpandMoreIcon />} className='AccordionSummaryClass'>
-                        What services we offer:
+                        What services we offer
                     </AccordionSummary>
                     <AccordionDetails className='AccordionDetailsClass'>
                         Currently, We are focusing on enabling low cost CNC milling and turining.
