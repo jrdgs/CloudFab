@@ -1,5 +1,6 @@
+@import "//landing-page/src/styling/Colors.css";
+
 .ContactBackground {
-    background-color: var(--background-color);
     width: 100vw;
     display: flex;
     flex-direction: column;

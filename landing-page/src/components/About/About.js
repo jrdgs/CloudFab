@@ -6,6 +6,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import StockPhoto from '..//../images/CADMachine.png';
 
 export default function About() {
   return (
@@ -51,6 +52,7 @@ export default function About() {
             </div>
             <div className='AboutRightSide'>
                 <h1>About Us</h1>                           
+                <img className='StockPhoto' src={StockPhoto} alt=''></img>
             </div>
         </div>
     </div>
