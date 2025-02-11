@@ -2,7 +2,7 @@
 
 .AccordionClass {
     padding-top: 10px;
-    width: 60vw;
+    width: 45vw;
     background-color: var(--background-color) !important;
 }
 
@@ -10,10 +10,56 @@
     font-size: 2em !important;
     background-color: var(--box-color) !important;
     color: white !important;
+    font-family: 'Montserrat', serif !important;
 }
 
 .AccordionDetailsClass {
     color: var(--second-text-color) !important;
     background-color: var(--box-color) !important;
-    border-top: 1px solid white !important;
+    /* border-top: 1px solid white !important; */
+}
+
+
+
+
+
+
+
+
+.AboutUIContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75vw;
+    padding-top: 150px;
+    /* background-color: gray; */
+}
+
+.AboutLeftSide{
+    display: flex;
+    width: 45vw;
+    flex-direction: column;
+
+    /* background-color: aqua; */
+}
+
+.AboutRightSide{
+    display: flex;
+    width: 25vw;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: red; */
+    height: 600px;
+}
+
+.AboutRightSide > h1 {
+    font-weight: 500;
+    font-size: 4rem;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    color: var(--primary-color);
+    width: 20vw;
+    text-align: center;
+    padding-bottom: 50px;
+    /* background-color: green; */
 }

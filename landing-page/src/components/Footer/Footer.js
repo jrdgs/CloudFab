@@ -5,11 +5,11 @@ import './Footer.css';
 export default function Footer () {
     return ( 
         <div className="FooterBackground">
-            Privacy Policy
-            Terms of service
-            Cookie Policy
+            <p>Privacy Policy</p>
+            <p>Terms of service</p>
+            <p>Cookie Policy</p>
 
-            © 2024 CloudFab Inc. All rights reserved.
+            <p>© 2024 CloudFab Inc. All rights reserved.</p>
         </div>
     )
 }
