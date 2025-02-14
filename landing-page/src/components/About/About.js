@@ -11,7 +11,7 @@ import { ToggleButtonGroup, ToggleButton } from '@mui/material';
 
 function MakeButton(question, answer) {
     return (
-        <ToggleButton value={question} sx={{color: 'white', }}>
+        <ToggleButton value={question} sx={{color: 'white', width: '14vw', '&.Mui-selected': {color: '#ffffff',}}}>
             {question}
         </ToggleButton>
     );
@@ -39,7 +39,9 @@ export default function About() {
         <div className="BackgroundContainerAbout" id="about">
             <div className="AboutUIContainer">
                 <div className='AboutLeftSide'>
-                    <ToggleButtonGroup size='large' value={question} exclusive onChange={handleChange} sx={{}}>
+                    <ToggleButtonGroup size='large' value={question} exclusive onChange={handleChange} sx={{color: 'white', justifyContent: 'center',
+                        outline: '1px solidrgb(15, 14, 14)',
+                    }}>
                         {MakeButton('Who we are')}
                         {MakeButton('What makes us different')}
                         {MakeButton('What services we offer')}

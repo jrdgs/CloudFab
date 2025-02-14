@@ -89,7 +89,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(0deg, var(--primary-color) -300%, var(--box-color) 20%);
+    background: linear-gradient(0deg, var(--primary-color) -300%, var(--box-color) 10%);
     opacity: .25;
     z-index: -1;
   }
