@@ -87,11 +87,11 @@ function InquiryForm() {
             value={formData.profession}
             onChange={handleChange}
           >
+            <option value="educator/researcher">Educator / Researcher</option>
+            <option value="professional">Professional</option>
             <option value="hs-student">Highschool Student</option>
             <option value="uni-student">University Student</option>
-            <option value="educator/researcher">Educator / Researcher</option>
             <option value="hobbyist">Hobbyist</option>
-            <option value="professional">Professional</option>
             <option value="other">Other</option>
           </select>
         </label>

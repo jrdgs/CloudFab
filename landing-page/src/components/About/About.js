@@ -7,13 +7,13 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import StockPhoto from '..//../images/CADMachine.png';
-import { ToggleButtonGroup, ToggleButton } from '@mui/material';
+import { Tabs, Tab } from '@mui/material';
+import { fontFamily } from '@mui/system';
 
 function MakeButton(question, answer) {
     return (
-        <ToggleButton value={question} sx={{color: 'white', width: '14vw', '&.Mui-selected': {color: '#ffffff',}}}>
-            {question}
-        </ToggleButton>
+        <Tab value={question} label={question} sx={{color: 'white', '&.Mui-selected': {color: 'var(--primary-color)',}}}>
+        </Tab>
     );
 }
 
@@ -39,13 +39,11 @@ export default function About() {
         <div className="BackgroundContainerAbout" id="about">
             <div className="AboutUIContainer">
                 <div className='AboutLeftSide'>
-                    <ToggleButtonGroup size='large' value={question} exclusive onChange={handleChange} sx={{color: 'white', justifyContent: 'center',
-                        outline: '1px solidrgb(15, 14, 14)',
-                    }}>
+                    <Tabs size='large' value={question} exclusive onChange={handleChange} variant="fullWidth" sx={{width:"40vw"}} TabIndicatorProps={{style:{backgroundColor: 'var(--primary-color)',},}}>
                         {MakeButton('Who we are')}
                         {MakeButton('What makes us different')}
                         {MakeButton('What services we offer')}
-                    </ToggleButtonGroup>
+                    </Tabs>
                     <div className='Answer'>{answer}</div>
                 </div>
                 <div className='AboutRightSide'>
