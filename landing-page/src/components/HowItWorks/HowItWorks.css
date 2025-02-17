@@ -1,65 +1,65 @@
 .UIContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 75vw;
-    padding-top: 100px;
-    padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75vw;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
-.LeftSide{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 25vw;
-    height: 500px;
+.LeftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25vw;
+  height: 500px;
 }
 
-.RightSide{
-    width: 50vw;
-    overflow: hidden;
+.RightSide {
+  width: 50vw;
+  overflow: hidden;
 }
 
 .LeftSide > h1 {
-    font-weight: 500;
-    font-size: 4rem;
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-    color: var(--primary-color);
-    width: 20vw;
-    text-align: center;
-    padding-bottom: 50px;
+  font-weight: 500;
+  font-size: 4rem;
+  /* border-top: 1px solid white; */
+  border-right: 2px solid white;
+  color: var(--primary-color);
+  width: 20vw;
+  text-align: center;
+  padding-bottom: 50px;
 }
 
 /* Content box adjustments */
 .timeline-content {
-    position: relative;
-    background: var(--background-color);
-    color: white;
-    border-radius: 8px;
-    padding: 30px 20px;
-    box-shadow: -5px -5px 20px rgba(0, 0, 0, .5);
-    animation: fadeIn 0.5s ease-in-out;
-    background: var(--box-color);
-    /* height: 1in; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 0.5; /* Ensure the content box stretches to take up available space */
-    margin-top: -75px; /* Add a margin on top to avoid any overlap */
+  position: relative;
+  background: var(--background-color);
+  color: white;
+  border-radius: 8px;
+  padding: 30px 20px;
+  box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease-in-out;
+  background: var(--box-color);
+  /* height: 1in; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 0.5; /* Ensure the content box stretches to take up available space */
+  margin-top: -75px; /* Add a margin on top to avoid any overlap */
 }
 
 /* Adjust the heading and text inside the timeline content */
 .timeline-content h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0 0 5px;
-    text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 5px;
+  text-align: center;
 }
 
 .timeline-content p {
-    font-size: 1.125rem;
-    color: var(--second-text-color);
-    margin: 0;
-    text-align: center;
+  font-size: 1.125rem;
+  color: var(--second-text-color);
+  margin: 0;
+  text-align: center;
 }

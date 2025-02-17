@@ -40,10 +40,10 @@ export default function HowItWorks() {
                         <h1>How it works</h1>
                     </div>
                     <div className="RightSide">
-                        <Timeline position="alternate-reverse" sx={{marginTop: "100px"}}>
+                        <Timeline position="alternate-reverse" sx={{ marginTop: "100px" }}>
                             {steps.map((step, index) => (
                                 <TimelineItem key={index} sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <TimelineSeparator sx={{height: "1in"}} >
+                                    <TimelineSeparator sx={{ height: "1in" }} >
                                         <TimelineDot variant="filled"
                                             sx={{
                                                 backgroundColor: theme.palette.primary.accent,
