@@ -5,7 +5,7 @@
 
 .AppIcon {
     height: 37.5px;
-    width: 37.5px;
+    aspect-ratio: 1/1;
 }
 
 .AppTitle {

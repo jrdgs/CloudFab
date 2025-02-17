@@ -15,7 +15,7 @@
 .dekstop-navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: flex-end; 
     background-color: var(--navbar-color);
     width: 100vw;
     padding: 0 10px;
@@ -54,18 +54,22 @@
 }
 
 .navbar-links li {
+    display: flex;
     width: 15vw;
-    background-color: red;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
 }
 
-.navbar-links li a {
+.navbar-links a {
     text-decoration: none;
     color: white;
     position: relative;
     font-size: 17px;
     text-align: center;
     width: 100%;
-    background-color: aqua;
+    background-color: var(--navbar-color);
 }
 
 .navbar-links a::after {
@@ -97,6 +101,9 @@
     cursor: pointer;
     width: 10vw;
     margin-right: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .waitlist-button:hover {
@@ -108,5 +115,79 @@
 /* Mobile CSS */
 
 .mobile-navbar {
+    display: flex;
+    width: 100vw;
+    background-color: var(--navbar-color);
+    justify-content: space-between;
+    align-items: center; 
+    width: 100vw;
+    padding: 0 10px;
+    border-bottom: 1px solid white;
+    position: sticky;
+    top:0;
+    z-index: 1000;
 
+}
+
+.mobile-drawer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--navbar-color);
+}
+
+.mobile-drawer-navbar-logo {
+    cursor: pointer;
+    padding: 0 0;
+    font-size: 25px;
+    border: 0;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    padding-bottom: 20px;
+}
+
+.mobile-navbar-links {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-bottom: 20px;
+    /* justify-content: center; */
+}
+
+.mobile-navbar-links li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.mobile-navbar-links a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-size: 17px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--navbar-color);
+}
+
+.mobile-waitlist-button {
+    color: white;
+    padding: 10px 20px;
+    /* margin-right: 10px; */
+    background-color: var(--navbar-color);
+    border-color: var(--primary-color);
+    border-radius: 7px;
+    box-shadow: 0px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }

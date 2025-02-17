@@ -48,21 +48,28 @@ export default function Navbar(){
         <div>
             {isMobile ? (
                 <nav className="mobile-navbar">
+                    <a href="\" className="navbar-logo"><LogoName /></a>
                     <IconButton
                         edge="start"
                         onClick={() => toggleDrawer(true)}
                     >
-                        <MenuIcon />
+                        <MenuIcon sx={{color:'#ffffff'}}/>
                     </IconButton>
+                    
 
-                    <Drawer
-                        anchor="top"
-                        open={drawerOpen}
-                        onClose={() => toggleDrawer(false)}
-                    >
-                        <IconButton edge="start" onClick={() => toggleDrawer(false)}>
-                            <CloseIcon />
-                        </IconButton>
+                    <Drawer anchor="top" open={drawerOpen} onClose={() => toggleDrawer(false)}>
+                        <div className="mobile-drawer">
+                            <a href="\" className="mobile-drawer-navbar-logo"><LogoName /></a>
+                            <ul className="mobile-navbar-links">
+                                <a href="#benefits"><li>Benefits</li></a>
+                                <a href="#howitworks"><li>How it Works</li></a>
+                                <a href="#about"><li>About Us</li></a>
+                            </ul>
+                            <button onClick={handleOpen} className="mobile-waitlist-button">Join the Waitlist</button>
+                            <IconButton edge="start" onClick={() => toggleDrawer(false)}>
+                                <CloseIcon sx={{color:'#ffffff'}}/>
+                            </IconButton>
+                        </div>
                     </Drawer>
                 </nav>
             ) : 
@@ -71,9 +78,9 @@ export default function Navbar(){
                     <nav className="dekstop-navbar">
                         <a href="\" className="navbar-logo"><LogoName /></a>
                         <ul className="navbar-links">
-                            <li><a href="#benefits">Benefits</a></li>
-                            <li><a href="#howitworks">How it Works</a></li>
-                            <li><a href="#about">About Us</a></li>
+                            <a href="#benefits"><li>Benefits</li></a>
+                            <a href="#howitworks"><li>How it Works</li></a>
+                            <a href="#about"><li>About Us</li></a>
                         </ul>
                         <button onClick={handleOpen} className="waitlist-button">Join the Waitlist</button>
                 
