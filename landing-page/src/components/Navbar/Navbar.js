@@ -2,13 +2,10 @@
 import React from 'react';
 import './Navbar.css';
 import LogoName from '../LogoName/LogoName';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import InquiryForm from '../InquiryForm/InquiryForm';
-import { borderRadius } from '@mui/system';
 import Backdrop from '@mui/material/Backdrop';
-import Fade from '@mui/material/Fade';
 
 const style = {
     position: 'absolute',
