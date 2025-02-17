@@ -1,0 +1,18 @@
+{
+  "name": "cloudfab",
+  "compatibility_date": "2025-02-17",
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "cloudfab-db",
+      "database_id": "25ae8f2f-c4f8-4eb3-89b7-c4b1c7f41f0d"
+    }
+  ],
+
+  "observability": {
+    "logs": {
+      "enabled": true
+    }
+  }
+}
