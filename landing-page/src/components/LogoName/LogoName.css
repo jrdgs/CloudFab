@@ -4,12 +4,15 @@
 }
 
 .AppIcon {
-    height: 1.5em;
-    width: 1.5em;
+    height: 37.5px;
+    width: 37.5px;
 }
 
 .AppTitle {
     color: #fff;
-    font-family: "DM Sans", sans-serif;
     font-size: inherit;
+}
+
+.AppTitleCloud {
+    color: var(--primary-color);
 }

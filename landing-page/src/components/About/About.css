@@ -61,7 +61,7 @@
     width: 45vw;
     flex-direction: column;
     justify-content: center;
-    background-color: red;
+    background-color: var(--box-color);
     height: var(--about-heigt);
 }
 

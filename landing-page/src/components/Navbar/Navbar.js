@@ -32,7 +32,7 @@ export default function Navbar(){
     const toggleDrawer = (open) => {setDrawerOpen(open);};
     
     // Determine whether to use drawer based on screen width
-    const isMobile = screenWidth <= 500;  // Example: Mobile if screen width <= 600px
+    const isMobile = screenWidth <= 600;
 
     // Update screen width on resize
     useEffect(() => {
