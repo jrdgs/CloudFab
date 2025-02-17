@@ -2,7 +2,6 @@
 import React from 'react';
 import './Navbar.css';
 import LogoName from '../LogoName/LogoName';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import InquiryForm from '../InquiryForm/InquiryForm';
