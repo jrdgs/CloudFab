@@ -7,8 +7,12 @@
     box-sizing: border-box;
 }
 
+
+/* Dekstop CSS */
+
+
 /* Navbar styling */
-.navbar {
+.dekstop-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center; 
@@ -92,4 +96,17 @@
 
 .waitlist-button:hover {
     background-image: linear-gradient(0deg, rgba(5,146,240,1) -100%, rgba(0,0,0,1) 100%);
+}
+
+.blah {
+    background-color: red;
+}
+
+
+
+
+/* Mobile CSS */
+
+.mobile-navbar {
+
 }

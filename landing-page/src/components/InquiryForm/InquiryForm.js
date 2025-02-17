@@ -5,7 +5,7 @@ function InquiryForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    profession: 'hs-student',
+    profession: 'educator/researcher',
     message: '',
   });
 
