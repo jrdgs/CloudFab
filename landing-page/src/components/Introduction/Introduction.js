@@ -9,7 +9,11 @@ export default function Body () {
     return ( 
         <div className="BackgroundContainer">
             <div className="AppText">
-                <p className="WelcomeText">Welcome to your <span className='WelcomeDigitalText'>digital</span> makerspace.</p>
+                <div className='AppTextLeft'>
+                    <p className="WelcomeText">Welcome to</p>
+                    <p className="WelcomeText">your <span className='WelcomeDigitalText'>digital</span></p>
+                    <p className="WelcomeText">makerspace.</p>
+                </div>
                 <p className="SecondaryWelcomeText">Save money on high quality machined parts for low-volume production</p>
             </div>
 
