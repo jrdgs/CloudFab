@@ -34,7 +34,7 @@ export default function HowItWorks() {
 
     return (
         <ThemeProvider theme={theme}>
-            <div className="BackgroundContainer">
+            <div className="BackgroundContainer" id="howitworks">
                 <div className="UIContainer">
                     <div className="LeftSide">
                         <h1>How it works</h1>
@@ -43,7 +43,7 @@ export default function HowItWorks() {
                         <Timeline position="alternate-reverse" sx={{marginTop: "100px"}}>
                             {steps.map((step, index) => (
                                 <TimelineItem key={index} sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <TimelineSeparator sx={{height: "2in"}} >
+                                    <TimelineSeparator sx={{height: "1in"}} >
                                         <TimelineDot variant="filled"
                                             sx={{
                                                 backgroundColor: theme.palette.primary.accent,
