@@ -8,24 +8,45 @@
     justify-content: space-between;
     width: 70vw;
     padding: 50px 0px;
+    /* background-color: antiquewhite; */
 }
+
+@media screen and (max-width: 500px) {
+    .AppText {
+        flex-direction: column;
+    }
+}
+
+.AppTextLeft {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 
 .WelcomeText {
     color: var(--primary-color);
-    font-size: 4rem;
     background-color: var(--background-color);
-    border-radius: 25px;
-    padding: 40px;
     width: 30vw;
     font-weight: 800;
     opacity: 0;
     transform: translateY(20px);
     animation: slideUp 0.7s ease-out forwards;
+    /* background-color: red; */
+    text-justify: inter-word;
+    font-size: 3.5vw;
+}
+
+@media screen and (max-width: 500px) {
+    .WelcomeText {
+        width: 70vw;
+        text-align: center;
+        font-size: 30px;
+    }
 }
 
 .SecondaryWelcomeText {
     color: var(--second-text-color);
-    font-size: 1.5rem;
+    font-size: 20px;
     border-radius: 15px;
     padding: 40px;
     width: 25vw;
@@ -35,6 +56,12 @@
     opacity: 0;
     transform: translateY(20px);
     animation: slideUp 0.7s ease-out 0.35s forwards;
+}
+
+@media screen and (max-width: 500px) {
+    .SecondaryWelcomeText {
+        width: 70vw;
+    }
 }
 
 .WelcomeDigitalText {
@@ -47,10 +74,24 @@
     width: 85vw;
 }
 
+@media screen and (max-width: 500px) {
+    .UICards {
+        flex-direction: column;
+        align-items: center;
+        height: 115vw;
+    }
+}
+
 .MyFilesUI, .EditPageUI {
     display: flex;
     width: 39vw;
     aspect-ratio: 2880/2140;
+}
+
+@media screen and (max-width: 500px) {
+    .MyFilesUI, .EditPageUI {
+        width: 70vw;;
+    }
 }
 
 .MyFilesUIImage {
