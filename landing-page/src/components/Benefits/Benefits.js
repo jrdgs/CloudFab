@@ -7,7 +7,7 @@ export default function Benefits() {
         <div className="BackgroundContainer" id="benefits">
             <div className="PaddingTop">
                 <div className="Header">
-                    Why Us?
+                    <h1>Why Us?</h1>
                 </div>
                 <div className="BenefitsLine">
                     <div className="BenefitCard">
