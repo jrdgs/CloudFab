@@ -3,8 +3,6 @@
     align-items: center;
     justify-content: space-between;
     width: 70vw;
-    padding: 50px 0px;
-    /* background-color: antiquewhite; */
 }
 
 @media screen and (max-width: 600px) {
@@ -18,7 +16,6 @@
     padding-bottom: 40px;
 }
 
-
 .WelcomeText {
     color: var(--primary-color);
     background-color: var(--background-color);
@@ -27,26 +24,28 @@
     opacity: 0;
     transform: translateY(20px);
     animation: slideUp 0.7s ease-out forwards;
-    /* background-color: red; */
     text-justify: inter-word;
     font-size: 3.5vw;
+}
+
+@media screen and (min-width:600px) and (max-width: 900px) {
+    .WelcomeText {
+        font-size: 4.5vw;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .WelcomeText {
         width: 70vw;
         text-align: center;
-        font-size: 30px;
+        font-size: 10vw;
     }
 }
 
 .SecondaryWelcomeText {
     color: var(--second-text-color);
-    font-size: 20px;
-    border-radius: 15px;
-    padding: 40px;
+    font-size: 1.5vw;
     width: 25vw;
-    margin-right: 5vw;
     font-weight: 500;
     font-style: italic;
     opacity: 0;
@@ -54,9 +53,17 @@
     animation: slideUp 0.7s ease-out 0.35s forwards;
 }
 
+@media screen and (min-width:600px) and (max-width: 900px) {
+    .SecondaryWelcomeText {
+        font-size: 2vw;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .SecondaryWelcomeText {
         width: 70vw;
+        font-size: 4vw;
+        text-align: center;
     }
 }
 
@@ -86,7 +93,8 @@
 
 @media screen and (max-width: 600px) {
     .MyFilesUI, .EditPageUI {
-        width: 70vw;;
+        width: 70vw;
+        padding-top: 10vw;
     }
 }
 
@@ -110,15 +118,6 @@
     opacity: 0;
     transform: translateY(20px);
     animation: slideUp 0.7s ease-out 0.7s forwards;
-}
-
-.LogoDiv {
-    font-size: 75px;
-    padding-top: 2rem;
-}
-
-.MoneyText {
-    color: var(--primary-color);
 }
 
 @keyframes slideUp {
