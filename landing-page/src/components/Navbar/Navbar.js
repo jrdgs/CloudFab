@@ -8,7 +8,7 @@ import InquiryForm from '../InquiryForm/InquiryForm';
 import Backdrop from '@mui/material/Backdrop';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { IconButton, Drawer } from '@mui/material';
 import { useState, useEffect } from 'react';
 
 const style = {
