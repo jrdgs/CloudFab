@@ -4,10 +4,11 @@ import './About.css';
 import '../../pages/HomePage/HomePage.css';
 import StockPhoto from '..//../images/CADMachine.png';
 import { Tabs, Tab } from '@mui/material';
+import { fontFamily } from '@mui/system';
 
 function MakeButton(question, answer) {
     return (
-        <Tab value={question} label={question} sx={{color: 'white', '&.Mui-selected': {color: 'var(--primary-color)',}}}>
+        <Tab value={question} label={question} sx={{fontFamily:"Montserrat", color: 'white', '&.Mui-selected': {color: 'var(--primary-color)',}}}>
         </Tab>
     );
 }

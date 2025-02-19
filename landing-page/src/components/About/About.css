@@ -1,7 +1,7 @@
 @import '../../styling/Colors.css';
 
 :root {
-    --about-heigt: 32vw;
+    --about-height: 32vw;
 }
 
 
@@ -12,24 +12,6 @@
     flex-direction: column;
     align-items: center;
     color: white;
-}
-
-.AccordionClass {
-    padding-top: 10px;
-    width: 45vw;
-    background-color: var(--background-color) !important;
-}
-
-.AccordionSummaryClass {
-    font-size: 2em !important;
-    background-color: var(--box-color) !important;
-    color: white !important;
-    font-family: 'Montserrat', serif !important;
-}
-
-.AccordionDetailsClass {
-    color: var(--second-text-color) !important;
-    background-color: var(--box-color) !important;
 }
 
 .AboutUIContainer {
@@ -44,7 +26,7 @@
     width: 55vw;
     flex-direction: column;
     align-items: center;
-    height: var(--about-heigt);
+    height: var(--about-height);
     padding-top: 50px;
 }
 
@@ -53,7 +35,7 @@
     padding-top: 30px;
     color: var(--second-text-color);
     text-align: justify;
-    font-size: large;
+    font-size: 1.2vw;
 }
 
 .AboutRightSide{
@@ -62,7 +44,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: var(--box-color);
-    height: var(--about-heigt);
+    height: var(--about-height);
 }
 
 .AboutRightSide > img {
@@ -70,15 +52,3 @@
     height: 100%;
     object-fit: fill;
 }
-
-/* .AboutRightSide > h1 {
-    font-weight: 500;
-    font-size: 4rem;
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-    color: var(--primary-color);
-    width: 20vw;
-    text-align: center;
-    padding-bottom: 50px;
-    background-color: green;
-} */
