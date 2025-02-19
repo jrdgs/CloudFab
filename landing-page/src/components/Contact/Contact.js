@@ -5,7 +5,7 @@ import InquiryForm from '../InquiryForm/InquiryForm';
 
 export default function Contact () {
     return ( 
-        <div className="ContactBackground">
+        <div id="contact" className="ContactBackground">
             <InquiryForm />
         </div>
     )

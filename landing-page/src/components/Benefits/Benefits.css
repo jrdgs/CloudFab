@@ -1,10 +1,13 @@
 @import '../../styling/Colors.css';
 
-.BenefitsLine {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 70vw;
+.PaddingTop {
+  padding-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .PaddingTop {
+    padding-top: 75px;
+  }
 }
 
 .Header {
@@ -24,12 +27,26 @@
   font-size: 4rem;
 }
 
-.PaddingTop {
-    padding-top: 100px;
+@media screen and (max-width: 600px) {
+  .Header > h1 {
+    font-size: 10vw;
+  }
+}
+
+.BenefitsLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+}
+
+@media screen and (max-width: 600px) {
+  .BenefitsLine {
+    flex-direction: column;
+  }
 }
 
 .BenefitCard {
-    background-image: inherit;
     width: 34vw;
     border-radius: 10px;
     height: 125px;
@@ -40,6 +57,13 @@
     margin-top: 2vw;
     cursor: pointer;
     perspective: 1000px;
+}
+
+@media screen and (max-width: 600px) {
+  .BenefitCard {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .BenefitCard > h1 {

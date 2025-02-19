@@ -65,7 +65,7 @@ export default function Navbar(){
                                 <a href="#howitworks"><li>How it Works</li></a>
                                 <a href="#about"><li>About Us</li></a>
                             </ul>
-                            <button onClick={handleOpen} className="mobile-waitlist-button">Join the Waitlist</button>
+                            <a href="#contact"><button href="#contact" className="mobile-waitlist-button">Join the Waitlist</button></a>
                             <IconButton edge="start" onClick={() => toggleDrawer(false)}>
                                 <CloseIcon sx={{color:'#ffffff'}}/>
                             </IconButton>
