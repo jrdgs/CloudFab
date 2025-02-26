@@ -42,7 +42,7 @@ export default function HowItWorks() {
     return (
         <ThemeProvider theme={theme}>
             <div className="BackgroundContainer" id="howitworks">
-                <div className={`UIContainer ${screenWidth < 900 ? 'StackedLayout' : ''}`}>
+                <div className={`UIContainer ${screenWidth < 600 ? 'StackedLayout' : ''}`}>
                     <div className="LeftSide">
                         <h1>How it works</h1>
                     </div>

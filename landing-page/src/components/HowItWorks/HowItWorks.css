@@ -17,9 +17,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 25vw;
   height: 500px;
   order: -1;
+}
+
+.LeftSide > h1 {
+  font-weight: 500;
+  font-size: 4rem;
+  border-right: 2px solid white;
+  color: var(--primary-color);
+  width: fit-content;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .RightSide {
@@ -34,23 +46,12 @@
   order: -1;
 }
 
-.LeftSide > h1 {
-  font-weight: 500;
-  font-size: 4rem;
-  border-right: 2px solid white;
-  color: var(--primary-color);
-  width: 20vw;
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
 .timeline-content {
   position: relative;
   background: var(--background-color);
   color: white;
   border-radius: 8px;
-  padding: 30px 20px;
+  padding: 2vw;
   box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.5s ease-in-out;
   background: var(--box-color);
@@ -86,7 +87,7 @@
   border-radius: 50%;
 }
 
-@media screen and (max-width: 900) {
+@media screen and (max-width: 900px) {
   .UIContainer {
     flex-direction: column;
     align-items: center;
@@ -102,8 +103,12 @@
 
   .LeftSide > h1 {
     width: 100%;
-    font-size: 3rem;
+    font-size: 2rem;
     border-right: none;
+    border-bottom: 2px solid white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .RightSide {
@@ -113,7 +118,8 @@
   .timeline-content {
     width: 90%; /* Adjusts the width to 90% of the viewport */
     margin-top: 20px;
-    padding: 2vw 4vw; /* Padding scales with viewport width */
+    padding: 4vw;
+    text-align: center;
     font-size: 4vw; /* Font size based on the viewport width */
     box-sizing: border-box; /* Ensures padding is included in the width calculation */
   }
@@ -138,11 +144,6 @@
     margin-bottom: 20px;
   }
 
-  .timeline-content {
-    padding: 60px;
-    text-align: center;
-  }
-
   .timeline-divider {
     width: 2px; /* Line width */
     background-color: #1976d2; /* Primary accent color */
@@ -150,7 +151,7 @@
     top: 0; /* Start from the top of the .timeline-step */
     bottom: 0; /* Stretch to the bottom */
     left: 50%; /* Align the line in the center */
-    transform: translateX(-50%) translateY(100%);  /* Center the line exactly between the cards */
-    margin-top: 1px; /* Add spacing between the content and the line */
+    transform: translateX(-50%) translateY(100%); /* Center the line exactly between the cards */
+    margin-top: 10px; /* Add spacing between the content and the line */
   }
 }
