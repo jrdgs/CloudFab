@@ -7,5 +7,14 @@
     color: white;
     background-color: var(--background-color);
     border-top: 1px solid white;
-    height: 50px;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 900px) {
+    .FooterBackground {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        gap: 15px;
+    }
 }
