@@ -33,7 +33,7 @@ function InquiryForm() {
           body: JSON.stringify(formData),
         }),
         // New email worker
-        fetch('https://email-worker.autumn-shadow-9dbb.workers.dev', {
+        fetch('https://mail.cloudfab.io', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
