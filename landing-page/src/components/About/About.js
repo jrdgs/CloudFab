@@ -1,5 +1,5 @@
 // About.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './About.css';
 import '../../pages/HomePage/HomePage.css';
 import StockPhoto from '..//../images/CADMachine.png';
@@ -23,6 +23,7 @@ export default function About() {
 
     const [question, setQuestion] = React.useState('Who we are');
     const [answer, setAnswer] = React.useState(question_dictionary.get('Who we are'));
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const handleChange = (event, newQuestion) => {
         if (newQuestion !== null) {
@@ -31,11 +32,31 @@ export default function About() {
         }
       };
 
+    // Update screen width on resize
+    useEffect(() => {
+        const handleResize = () => setScreenWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <div className="BackgroundContainerAbout" id="about">
             <div className="AboutUIContainer">
                 <div className='AboutLeftSide'>
-                    <Tabs size='large' value={question} exclusive onChange={handleChange} variant="fullWidth" sx={{width:"40vw"}} TabIndicatorProps={{style:{backgroundColor: 'var(--primary-color)',},}}>
+                    <Tabs size='large' value={question} exclusive onChange={handleChange} variant="fullWidth" orientation={screenWidth < 600 ? 'vertical' : 'horizontal'}
+                    sx={{
+                        width:"40vw",
+                        
+                        '@media screen and (max-width: 600px)': {
+                            width: "80vw",
+                            '.MuiTabs-indicator': {
+                                left: 0,
+                            }
+                        }
+                    }} 
+                    TabIndicatorProps={{style:{backgroundColor: 'var(--primary-color)',},}}>
                         {MakeButton('Who we are')}
                         {MakeButton('What makes us different')}
                         {MakeButton('What services we offer')}
