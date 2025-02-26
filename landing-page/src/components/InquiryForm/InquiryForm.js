@@ -41,7 +41,7 @@ function InquiryForm() {
       ]);
 
       if (dbResponse.ok && emailResponse.ok) {
-        setSuccessMessage('Inquiry submitted successfully. Check your email!');
+        setSuccessMessage('Inquiry submitted successfully.');
         setErrorMessage('');
         setTimeout(() => setSuccessMessage(''), 5000);
         setFormData({ name: '', email: '', profession: 'hs-student', message: '' });
