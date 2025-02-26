@@ -24,20 +24,29 @@ function InquiryForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://cloudfab.autumn-shadow-9dbb.workers.dev', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      // Call both workers in parallel
+      const [dbResponse, emailResponse] = await Promise.all([
+        // Your existing D1 database worker
+        fetch('https://cloudfab.autumn-shadow-9dbb.workers.dev', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        }),
+        // New email worker
+        fetch('https://email-worker.autumn-shadow-9dbb.workers.dev', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        })
+      ]);
 
-      const responseData = await response.json();
-      if (response.ok) {
-        setSuccessMessage('Inquiry submitted successfully. Thank you!');
+      if (dbResponse.ok && emailResponse.ok) {
+        setSuccessMessage('Inquiry submitted successfully. Check your email!');
         setErrorMessage('');
         setTimeout(() => setSuccessMessage(''), 5000);
         setFormData({ name: '', email: '', profession: 'hs-student', message: '' });
       } else {
-        throw new Error(responseData.error || 'Failed to submit inquiry');
+        throw new Error('Failed to submit inquiry');
       }
     } catch (error) {
       setErrorMessage(`Error: ${error.message}`);
