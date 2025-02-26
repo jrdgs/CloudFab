@@ -90,23 +90,12 @@ select:hover {
   background-color: #f1f1f1; /* Slightly darker background on hover */
 }
 
-/* @media (max-width: 600px) {
-  .InquiryFormHeader {
-    font-size: 1rem;
-  }
-
-  .FormLabel {
-    font-size: 0.9rem;
-  }
-
-  .InquiryForm input, .InquiryForm textarea {
-    font-size: 0.9rem;
-    padding: 6px;
+@media (max-width: 600px) {
+  .InquiryFormContainer {
+    width: 90vw;
   }
 
   .InquiryForm button {
-    font-size: 0.7rem;
-    padding: 4px;
-    width: 70px;
+    width: 50vw;
   }
-} */
+}

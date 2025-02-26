@@ -21,13 +21,28 @@
     width: 100vw;
 }
 
+
+@media screen and (max-width: 600px) {
+    .AboutUIContainer {
+      flex-direction: column-reverse;
+    }
+}
+
 .AboutLeftSide{
     display: flex;
     width: 55vw;
     flex-direction: column;
     align-items: center;
     height: var(--about-height);
-    padding-top: 50px;
+    padding-top: 3vw;
+}
+
+@media screen and (max-width: 600px) {
+    .AboutLeftSide {
+        width: 100vw;
+        height: 150vw;
+        padding-top: 20px;
+    }
 }
 
 .Answer {
@@ -36,6 +51,13 @@
     color: var(--second-text-color);
     text-align: justify;
     font-size: 1.2vw;
+}
+
+@media screen and (max-width: 600px) {
+    .Answer {
+        width: 80vw;
+        font-size: 4vw;
+    }
 }
 
 .AboutRightSide{
@@ -47,8 +69,17 @@
     height: var(--about-height);
 }
 
+@media screen and (max-width: 600px) {
+    .AboutRightSide {
+        width: 100vw;
+        height: 80vw;
+        object-fit: fill;
+    }
+}
+
 .AboutRightSide > img {
     width: 100%;
     height: 100%;
     object-fit: fill;
 }
+
