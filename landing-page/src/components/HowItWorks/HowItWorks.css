@@ -7,12 +7,19 @@
   padding-bottom: 100px;
 }
 
+.StackedLayout {
+  flex-direction: column !important;
+  align-items: center;
+  text-align: center;
+}
+
 .LeftSide {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 25vw;
   height: 500px;
+  order: -1;
 }
 
 .RightSide {
@@ -20,10 +27,16 @@
   overflow: hidden;
 }
 
+.StackedLayout .LeftSide {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  order: -1;
+}
+
 .LeftSide > h1 {
   font-weight: 500;
   font-size: 4rem;
-  /* border-top: 1px solid white; */
   border-right: 2px solid white;
   color: var(--primary-color);
   width: 20vw;
@@ -32,7 +45,6 @@
   padding-bottom: 50px;
 }
 
-/* Content box adjustments */
 .timeline-content {
   position: relative;
   background: var(--background-color);
@@ -42,15 +54,17 @@
   box-shadow: -5px -5px 20px rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.5s ease-in-out;
   background: var(--box-color);
-  /* height: 1in; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-grow: 0.5; /* Ensure the content box stretches to take up available space */
-  margin-top: -75px; /* Add a margin on top to avoid any overlap */
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin-top: -75px;
 }
 
-/* Adjust the heading and text inside the timeline content */
 .timeline-content h2 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -63,4 +77,80 @@
   color: var(--second-text-color);
   margin: 0;
   text-align: center;
+}
+
+.timeline-spacer {
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 900) {
+  .UIContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .LeftSide {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    order: -1;
+  }
+
+  .LeftSide > h1 {
+    width: 100%;
+    font-size: 3rem;
+    border-right: none;
+  }
+
+  .RightSide {
+    width: 90vw;
+  }
+
+  .timeline-content {
+    width: 90%; /* Adjusts the width to 90% of the viewport */
+    margin-top: 20px;
+    padding: 2vw 4vw; /* Padding scales with viewport width */
+    font-size: 4vw; /* Font size based on the viewport width */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  }
+
+  .timeline-spacer {
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Position relative to allow correct placement of the divider */
+    margin-bottom: 20px;
+  }
+
+  .timeline-content {
+    padding: 60px;
+    text-align: center;
+  }
+
+  .timeline-divider {
+    width: 2px; /* Line width */
+    background-color: #1976d2; /* Primary accent color */
+    position: absolute;
+    top: 0; /* Start from the top of the .timeline-step */
+    bottom: 0; /* Stretch to the bottom */
+    left: 50%; /* Align the line in the center */
+    transform: translateX(-50%) translateY(100%);  /* Center the line exactly between the cards */
+    margin-top: 1px; /* Add spacing between the content and the line */
+  }
 }
