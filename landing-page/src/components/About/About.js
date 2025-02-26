@@ -24,7 +24,7 @@ export default function About() {
     const [answer, setAnswer] = React.useState(question_dictionary.get('Who we are'));
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-    const handleChange = (newQuestion) => {
+    const handleChange = (event, newQuestion) => {
         if (newQuestion !== null) {
             setQuestion(newQuestion);
             setAnswer(question_dictionary.get(newQuestion));
