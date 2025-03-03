@@ -9,7 +9,7 @@ export default function Footer () {
             <p>Terms of service</p>
             <p>Cookie Policy</p>
 
-            <p>© 2024 CloudFab Inc. All rights reserved.</p>
+            <p>© 2025 CloudFab Inc. All rights reserved.</p>
         </div>
     )
 }

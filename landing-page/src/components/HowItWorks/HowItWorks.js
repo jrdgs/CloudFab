@@ -36,7 +36,7 @@ export default function HowItWorks() {
         { title: "Choose your stock", desc: "from CloudFabs available materials" },
         { title: "Fixture your material", desc: "using CloudFabs proprietary software" },
         { title: "Program your tool paths", desc: "using industry-standard pathing" },
-        { title: "Upload your model", desc: "as a STEP from your preferred CAD software" },
+        { title: "Save money on your parts", desc: "and gets your parts made fast" },
     ];
 
     return (
