@@ -61,11 +61,11 @@ export default function Navbar(){
                         <div className="mobile-drawer">
                             <a href="\" className="mobile-drawer-navbar-logo"><LogoName /></a>
                             <ul className="mobile-navbar-links">
-                                <a href="#benefits"><li>Benefits</li></a>
-                                <a href="#howitworks"><li>How it Works</li></a>
-                                <a href="#about"><li>About Us</li></a>
+                                <a onClick={() => toggleDrawer(false)} href="#benefits"><li>Benefits</li></a>
+                                <a onClick={() => toggleDrawer(false)} href="#howitworks"><li>How it Works</li></a>
+                                <a onClick={() => toggleDrawer(false)} href="#about"><li>About Us</li></a>
                             </ul>
-                            <a href="#contact"><button href="#contact" className="mobile-waitlist-button">Join the Waitlist</button></a>
+                            <a onClick={() => toggleDrawer(false)} href="#contact"><button href="#contact" className="mobile-waitlist-button">Join the Waitlist</button></a>
                             <IconButton edge="start" onClick={() => toggleDrawer(false)}>
                                 <CloseIcon sx={{color:'#ffffff'}}/>
                             </IconButton>

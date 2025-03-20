@@ -8,6 +8,7 @@
 @media screen and (max-width: 600px) {
     .AppText {
         flex-direction: column;
+        padding-top: 50px;
     }
 }
 

@@ -123,10 +123,9 @@
     width: 100vw;
     padding: 0 10px;
     border-bottom: 1px solid white;
-    position: sticky;
+    position: fixed;
     top:0;
     z-index: 1000;
-
 }
 
 .mobile-drawer {
