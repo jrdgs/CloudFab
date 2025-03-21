@@ -1,6 +1,7 @@
 // About.js
 import React from 'react';
 import './Benefits.css';
+import Clarity from '@microsoft/clarity';
 
 export default function Benefits() {
     return (
@@ -10,7 +11,7 @@ export default function Benefits() {
                     <h1>Why Us?</h1>
                 </div>
                 <div className="BenefitsLine">
-                    <div className="BenefitCard">
+                    <div className="BenefitCard" onClick={() => Clarity.event("Benefit Clicked", { benefit: "Save Money" })}>
                         <div className='front' >
                             Save Money
                         </div>
@@ -18,7 +19,7 @@ export default function Benefits() {
                             Save up to 50% compared to other online machine shops by programming your own job.
                         </div>
                     </div>
-                    <div className="BenefitCard">
+                    <div className="BenefitCard" onClick={() => Clarity.event("Benefit Clicked", { benefit: "Full Control" })}>
                         <div className='front' >
                             Full Control
                         </div>
@@ -28,7 +29,7 @@ export default function Benefits() {
                     </div>
                 </div>
                 <div className="BenefitsLine">
-                    <div className="BenefitCard">
+                    <div className="BenefitCard" onClick={() => Clarity.event("Benefit Clicked", { benefit: "Instant Feedback" })}>
                         <div className='front' >
                             Instant Feedback
                         </div>
@@ -36,7 +37,7 @@ export default function Benefits() {
                             Get instant feedback on the manufacturability of your design, how much it will cost, and what is driving those costs.
                         </div>
                     </div>
-                    <div className="BenefitCard">
+                    <div className="BenefitCard" onClick={() => Clarity.event("Benefit Clicked", { benefit: "Quick Turnaround" })}>
                         <div className='front' >
                             Quick Turnaround
                         </div>
