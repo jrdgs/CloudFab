@@ -49,6 +49,13 @@ function InquiryForm() {
           setErrorMessage('');
           setTimeout(() => setSuccessMessage(''), 5000);
           setFormData({ name: '', email: '', profession: 'hs-student', message: '' });
+
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-16919894702/j_niCJDN86gaEK61hIQ_',
+            'value': 0.0, // Adjust based on your needs, can be dynamic
+            'currency': 'USD',
+          });
+
         } else {
           throw new Error('Failed to submit inquiry');
         }
@@ -65,6 +72,7 @@ function InquiryForm() {
       setTimeout(() => setErrorMessage(''), 5000);
     }
   };
+
 
   return (
     <div className="InquiryFormContainer">
