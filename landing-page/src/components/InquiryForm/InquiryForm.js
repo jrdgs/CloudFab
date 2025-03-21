@@ -52,7 +52,7 @@ function InquiryForm() {
 
           window.gtag('event', 'conversion', {
             'send_to': 'AW-16919894702/j_niCJDN86gaEK61hIQ_',
-            'value': 0.0, // Adjust based on your needs, can be dynamic
+            'value': 1.0, // Adjust based on your needs, can be dynamic
             'currency': 'USD',
           });
 
