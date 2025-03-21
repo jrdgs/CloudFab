@@ -4,21 +4,26 @@ import './About.css';
 import '../../pages/HomePage/HomePage.css';
 import StockPhoto from '..//../images/CADMachine.png';
 import { Tabs, Tab } from '@mui/material';
+import Clarity from '@microsoft/clarity';
 
 function MakeButton(question) {
     return (
-        <Tab value={question} label={question} sx={{fontFamily:"Montserrat", color: 'white', '&.Mui-selected': {color: 'var(--primary-color)',}}}>
-        </Tab>
+        <Tab
+            value={question}
+            label={question}
+            sx={{ fontFamily: "Montserrat", color: 'white', '&.Mui-selected': { color: 'var(--primary-color)' } }}
+            onClick={() => Clarity.event("Tab Clicked", { question })}
+        />
     );
 }
 
 
 export default function About() {
     let question_dictionary = new Map();
-    question_dictionary.set('Who we are', "We are a passionate team of engineers who have experienced firsthand the challenges of accessing affordable, high-quality fabrication tools for low-volume manufacturing. Whether for personal projects, university research, or startup prototypes, traditional machining options have been expensive, slow, and inaccessible. That’s why we created CloudFab—an innovative platform that empowers engineers, makers, and businesses to access CNC manufacturing at a fraction of the cost of traditional job shops and online machining services. Our mission is simple: to break down barriers in manufacturing and give creators the tools they need to bring their ideas to life.");  
-    question_dictionary.set('What makes us different', "Most online manufacturing services provide parts from a 3D model, but at a steep price and with little control. We believe engineers and makers in 2025 deserve better. CloudFab puts the power of manufacturing directly into your hands, allowing you to interact with and control the tools you use. Our platform bridges the gap between digital design and physical production, enabling you to iterate faster, reduce costs, and achieve professional-grade results—all without relying on expensive middlemen. Whether you’re a hobbyist, a startup, or an established company, CloudFab makes high-precision manufacturing accessible, affordable, and truly yours.");  
-    question_dictionary.set('What services we offer', "Right now, we’re revolutionizing CNC milling and turning, making these essential fabrication methods more cost-effective and accessible. But we’re just getting started. In the near future, CloudFab will expand to offer a full suite of advanced manufacturing services, including 3D printing, sheet metal fabrication, tube bending, laser cutting, and more. Our goal is to become the go-to platform for engineers, makers, and businesses seeking high-quality, on-demand fabrication—without the traditional hassle or high costs.");  
-
+    question_dictionary.set('Who we are',"We are a small team of engineers that are frustrated by the lack of access to fabrication tools and machines for low volume manufacturing for machined components. This has prevented us from developing personal projects, university projects, startup ideas, and limited access prototyping generally. CloudFab will allow engineers and makers to access CNC macnufacturing at a fraction of the cost of traditional job shops and online machining servies.");
+    question_dictionary.set('What makes us different',"Other companies will provide parts from a 3D model at a high cost, but we believe that engineers and makers in 2024 are capable of much more. Through the CloudFab platform, we allow users to interface directly with the tools they are using, putting the power of manufacturing back into your hands and saving you money at the same time.");
+    question_dictionary.set('What services we offer',"Currently, We are focusing on enabling low cost CNC milling and turining.In the future, we plan to offer a full range of fabrication and manufacturing services including 3D printing, sheet metal fabrication, tube bending and much, much more.");
+    
 
     const [question, setQuestion] = React.useState('Who we are');
     const [answer, setAnswer] = React.useState(question_dictionary.get('Who we are'));
@@ -29,7 +34,7 @@ export default function About() {
             setQuestion(newQuestion);
             setAnswer(question_dictionary.get(newQuestion));
         }
-      };
+    };
 
     // Update screen width on resize
     useEffect(() => {
@@ -45,17 +50,17 @@ export default function About() {
             <div className="AboutUIContainer">
                 <div className='AboutLeftSide'>
                     <Tabs size='large' value={question} onChange={handleChange} variant="fullWidth" orientation={screenWidth < 600 ? 'vertical' : 'horizontal'}
-                    sx={{
-                        width:"40vw",
-                        
-                        '@media screen and (max-width: 600px)': {
-                            width: "80vw",
-                            '.MuiTabs-indicator': {
-                                left: 0,
+                        sx={{
+                            width: "40vw",
+
+                            '@media screen and (max-width: 600px)': {
+                                width: "80vw",
+                                '.MuiTabs-indicator': {
+                                    left: 0,
+                                }
                             }
-                        }
-                    }} 
-                    TabIndicatorProps={{style:{backgroundColor: 'var(--primary-color)',},}}>
+                        }}
+                        TabIndicatorProps={{ style: { backgroundColor: 'var(--primary-color)', }, }}>
                         {MakeButton('Who we are')}
                         {MakeButton('What makes us different')}
                         {MakeButton('What services we offer')}

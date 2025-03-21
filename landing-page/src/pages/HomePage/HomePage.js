@@ -6,6 +6,7 @@ import Contact from '../../components/Contact/Contact';
 import Benefits from '../../components/Benefits/Benefits';
 import HowItWorks from '../../components/HowItWorks/HowItWorks';
 import Footer from '../../components/Footer/Footer';
+import CookieBanner from '../../components/CookieBanner/CookieBanner';
 
 function HomePage() {
   return (
@@ -17,6 +18,7 @@ function HomePage() {
       <About />
       <Contact />
       <Footer />
+      <CookieBanner />
     </div>
   );
 }

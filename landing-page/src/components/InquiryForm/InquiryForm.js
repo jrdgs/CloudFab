@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './InquiryForm.css';
+import Clarity from '@microsoft/clarity';
 
 function InquiryForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    profession: 'educator/researcher',
+    profession: '',
     message: '',
   });
 
@@ -18,38 +19,48 @@ function InquiryForm() {
       ...prev,
       [name]: value,
     }));
+
+    Clarity.event("Form Input", { field: name, value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Call both workers in parallel
-      const [dbResponse, emailResponse] = await Promise.all([
-        // Your existing D1 database worker
-        fetch('https://cloudfab.autumn-shadow-9dbb.workers.dev', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        }),
-        // New email worker
-        fetch('https://mail.cloudfab.io', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        })
-      ]);
+      if (formData.profession !== "Select One") {
+        // Call both workers in parallel
+        const [dbResponse, emailResponse] = await Promise.all([
+          // Your existing D1 database worker
+          fetch('https://cloudfab.autumn-shadow-9dbb.workers.dev', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+          }),
+          // New email worker
+          fetch('https://mail.cloudfab.io', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+          })
+        ]);
 
-      if (dbResponse.ok && emailResponse.ok) {
-        setSuccessMessage('Inquiry submitted successfully.');
-        setErrorMessage('');
-        setTimeout(() => setSuccessMessage(''), 5000);
-        setFormData({ name: '', email: '', profession: 'hs-student', message: '' });
-      } else {
-        throw new Error('Failed to submit inquiry');
+        if (dbResponse.ok && emailResponse.ok) {
+          setSuccessMessage('Inquiry submitted successfully. Check your email!');
+          setErrorMessage('');
+          setTimeout(() => setSuccessMessage(''), 5000);
+          setFormData({ name: '', email: '', profession: 'hs-student', message: '' });
+        } else {
+          throw new Error('Failed to submit inquiry');
+        }
+      }
+      else {
+        throw new Error('Please select a profession.');
       }
     } catch (error) {
       setErrorMessage(`Error: ${error.message}`);
+
+      Clarity.event("Form Submission Error", { error: error.message });
+
       setSuccessMessage('');
       setTimeout(() => setErrorMessage(''), 5000);
     }
@@ -73,7 +84,14 @@ function InquiryForm() {
 
         <label>
           <p className="FormLabel">Profession:</p>
-          <select name="profession" value={formData.profession} onChange={handleChange}>
+          <select
+            name="profession"
+            value={formData.profession}
+            onChange={handleChange}
+            required
+          >
+
+            <option value="" disabled>Select One</option>
             <option value="educator/researcher">Educator / Researcher</option>
             <option value="professional">Professional</option>
             <option value="hs-student">Highschool Student</option>
@@ -81,6 +99,8 @@ function InquiryForm() {
             <option value="hobbyist">Hobbyist</option>
             <option value="other">Other</option>
           </select>
+
+
         </label>
 
         <label>
@@ -90,7 +110,7 @@ function InquiryForm() {
 
         <button type="submit">Submit</button>
       </form>
-    </div>
+    </div >
   );
 }
 
