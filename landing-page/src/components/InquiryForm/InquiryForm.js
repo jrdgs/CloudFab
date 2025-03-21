@@ -1,3 +1,4 @@
+/* global gtag */
 import React, { useState } from 'react';
 import './InquiryForm.css';
 import Clarity from '@microsoft/clarity';
@@ -11,17 +12,22 @@ function InquiryForm() {
   });
 
   function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof (url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
-      'send_to': 'AW-16919894702/y7zSCJai_60aEK61hIQ_',
-      'event_callback': callback
-    });
+    if (typeof gtag !== 'undefined') {
+      var callback = function () {
+        if (typeof url !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16919894702/y7zSCJai_60aEK61hIQ_',
+        'event_callback': callback
+      });
+    } else {
+      console.error('Google Analytics (gtag) not loaded');
+    }
     return false;
   }
+
 
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
