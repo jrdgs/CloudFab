@@ -10,6 +10,19 @@ function InquiryForm() {
     message: '',
   });
 
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof (url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-16919894702/y7zSCJai_60aEK61hIQ_',
+      'event_callback': callback
+    });
+    return false;
+  }
+
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -50,11 +63,7 @@ function InquiryForm() {
           setTimeout(() => setSuccessMessage(''), 5000);
           setFormData({ name: '', email: '', profession: 'hs-student', message: '' });
 
-          window.gtag('event', 'conversion', {
-            'send_to': 'AW-16919894702/j_niCJDN86gaEK61hIQ_',
-            'value': 1.0, // Adjust based on your needs, can be dynamic
-            'currency': 'USD',
-          });
+          gtag_report_conversion("https://www.cloudfab.io")
 
         } else {
           throw new Error('Failed to submit inquiry');
