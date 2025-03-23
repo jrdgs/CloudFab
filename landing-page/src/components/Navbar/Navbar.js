@@ -74,7 +74,7 @@ export default function Navbar() {
                                 <a href="#howitworks" onClick={() => handleNavClick("How it Works")}><li>How it Works</li></a>
                                 <a href="#about" onClick={() => handleNavClick("About Us")}><li>About Us</li></a>
                             </ul>
-                            <a href="#contact"><button onClick={handleWaitlistClick} className="waitlist-button">Join the Waitlist</button></a>
+                            <a href="#contact"><button onClick={handleWaitlistClick} className="mobile-waitlist-button">Join the Waitlist</button></a>
                             <IconButton edge="start" onClick={() => toggleDrawer(false)}>
                                 <CloseIcon sx={{ color: '#ffffff' }} />
                             </IconButton>

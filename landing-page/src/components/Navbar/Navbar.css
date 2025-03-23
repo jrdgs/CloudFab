@@ -176,7 +176,6 @@
 .mobile-waitlist-button {
     color: white;
     padding: 10px 20px;
-    /* margin-right: 10px; */
     background-color: var(--navbar-color);
     border-color: var(--primary-color);
     border-radius: 7px;
