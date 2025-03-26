@@ -10,6 +10,11 @@
     padding: 20px 0;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 900px) {
     .FooterBackground {
         flex-direction: column;
