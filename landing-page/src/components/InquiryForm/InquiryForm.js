@@ -97,12 +97,12 @@ function InquiryForm() {
       <form className="InquiryForm" onSubmit={handleSubmit}>
         <label>
           <p className="FormLabel">Name:</p>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+          <input type="text" name="name" value={formData.name} onChange={handleChange} maxlength="1000" required />
         </label>
 
         <label>
           <p className="FormLabel">Email:</p>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+          <input type="email" name="email" value={formData.email} onChange={handleChange} maxlength="1000" required />
         </label>
 
         <label>
@@ -128,7 +128,7 @@ function InquiryForm() {
 
         <label>
           <p className="FormLabel">Message (optional):</p>
-          <textarea name="message" value={formData.message} onChange={handleChange} rows="4" />
+          <textarea name="message" value={formData.message} onChange={handleChange} rows="4" maxlength="1000" />
         </label>
 
         <button type="submit">Submit</button>
