@@ -28,7 +28,6 @@ function InquiryForm() {
     return false;
   }
 
-
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -69,25 +68,40 @@ function InquiryForm() {
           setTimeout(() => setSuccessMessage(''), 5000);
           setFormData({ name: '', email: '', profession: 'hs-student', message: '' });
 
-          gtag_report_conversion("https://www.cloudfab.io")
+          gtag_report_conversion("https://www.cloudfab.io");
 
+          // Push Reddit event to the dataLayer
+          if (typeof window.dataLayer !== 'undefined') {
+            window.dataLayer.push({
+              event: 'Inquiry', // You can change this to any event name that suits your needs
+              conversionId: 'a2_grug5w52ci7y',
+              advancedMatchingParams: [
+                { name: 'email', value: formData.email },
+              ],
+              itemCount: 1, // If you're considering the form submission as an "item"
+              currency: 'USD', // You can adjust this or make it dynamic if needed
+              transactionValue: 1, // Set this to a relevant value or dynamic data
+              productRows: [{
+                id: Date.now(), // You can generate an ID or use a dynamic value
+                category: 'Inquiry', // Adjust this to match your needs
+                name: formData.email, // You can use the profession as the "product name"
+              }],
+            });
+          }
         } else {
           throw new Error('Failed to submit inquiry');
         }
-      }
-      else {
+      } else {
         throw new Error('Please select a profession.');
       }
     } catch (error) {
       setErrorMessage(`Error: ${error.message}`);
-
       Clarity.event("Form Submission Error", { error: error.message });
 
       setSuccessMessage('');
       setTimeout(() => setErrorMessage(''), 5000);
     }
   };
-
 
   return (
     <div className="InquiryFormContainer">
@@ -97,12 +111,12 @@ function InquiryForm() {
       <form className="InquiryForm" onSubmit={handleSubmit}>
         <label>
           <p className="FormLabel">Name:</p>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} maxlength="1000" required />
+          <input type="text" name="name" value={formData.name} onChange={handleChange} maxLength="1000" required />
         </label>
 
         <label>
           <p className="FormLabel">Email:</p>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} maxlength="1000" required />
+          <input type="email" name="email" value={formData.email} onChange={handleChange} maxLength="1000" required />
         </label>
 
         <label>
@@ -113,7 +127,6 @@ function InquiryForm() {
             onChange={handleChange}
             required
           >
-
             <option value="" disabled>Select One</option>
             <option value="educator/researcher">Educator / Researcher</option>
             <option value="professional">Professional</option>
@@ -122,18 +135,16 @@ function InquiryForm() {
             <option value="hobbyist">Hobbyist</option>
             <option value="other">Other</option>
           </select>
-
-
         </label>
 
         <label>
           <p className="FormLabel">Message (optional):</p>
-          <textarea name="message" value={formData.message} onChange={handleChange} rows="4" maxlength="1000" />
+          <textarea name="message" value={formData.message} onChange={handleChange} rows="4" maxLength="1000" />
         </label>
 
         <button type="submit">Submit</button>
       </form>
-    </div >
+    </div>
   );
 }
 
