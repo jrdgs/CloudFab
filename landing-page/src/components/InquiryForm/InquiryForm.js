@@ -67,25 +67,21 @@ function InquiryForm() {
 
           gtag_report_conversion("https://www.cloudfab.io");
 
-          if (typeof window.dataLayer !== 'undefined') {
-            console.log("hello")
-            window.dataLayer.push({
-              event: 'Inquiry',
-              conversionId: 'a2_grug5w52ci7y',
-              advancedMatchingParams: [
-                { name: 'email', value: formData.email },
-              ],
-              itemCount: 1,
-              currency: 'USD',
-              transactionValue: 1,
-              productRows: [{
-                id: Date.now(),
-                category: 'Inquiry',
-                name: formData.email,
-              }],
-            });
-            console.log(window.dataLayer);
-          }
+          window.dataLayer.push({
+            event: 'Purchase',
+            conversionId: 'a2_grug5w52ci7y',
+            advancedMatchingParams: [
+              { name: 'email', value: formData.email },
+            ],
+            itemCount: 1,
+            currency: 'USD',
+            transactionValue: 1,
+            productRows: [{
+              id: Date.now(),
+              category: 'Inquiry',
+              name: formData.email,
+            }],
+          });
         } else {
           throw new Error('Failed to submit inquiry');
         }
