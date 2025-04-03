@@ -70,21 +70,20 @@ function InquiryForm() {
 
           gtag_report_conversion("https://www.cloudfab.io");
 
-          // Push Reddit event to the dataLayer
           if (typeof window.dataLayer !== 'undefined') {
             window.dataLayer.push({
-              event: 'Inquiry', // You can change this to any event name that suits your needs
+              event: 'Inquiry',
               conversionId: 'a2_grug5w52ci7y',
               advancedMatchingParams: [
                 { name: 'email', value: formData.email },
               ],
-              itemCount: 1, // If you're considering the form submission as an "item"
-              currency: 'USD', // You can adjust this or make it dynamic if needed
-              transactionValue: 1, // Set this to a relevant value or dynamic data
+              itemCount: 1,
+              currency: 'USD',
+              transactionValue: 1,
               productRows: [{
-                id: Date.now(), // You can generate an ID or use a dynamic value
-                category: 'Inquiry', // Adjust this to match your needs
-                name: formData.email, // You can use the profession as the "product name"
+                id: Date.now(),
+                category: 'Inquiry',
+                name: formData.email,
               }],
             });
           }
