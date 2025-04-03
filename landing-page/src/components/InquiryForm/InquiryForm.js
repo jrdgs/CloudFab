@@ -14,9 +14,7 @@ function InquiryForm() {
   function gtag_report_conversion(url) {
     if (typeof gtag !== 'undefined') {
       var callback = function () {
-        if (typeof url !== 'undefined') {
-          window.location = url;
-        }
+        console.log('Conversion tracked for google analytics');
       };
       gtag('event', 'conversion', {
         'send_to': 'AW-16919894702/y7zSCJai_60aEK61hIQ_',
@@ -25,7 +23,6 @@ function InquiryForm() {
     } else {
       console.error('Google Analytics (gtag) not loaded');
     }
-    return false;
   }
 
   const [successMessage, setSuccessMessage] = useState('');
@@ -71,6 +68,7 @@ function InquiryForm() {
           gtag_report_conversion("https://www.cloudfab.io");
 
           if (typeof window.dataLayer !== 'undefined') {
+            console.log("hello")
             window.dataLayer.push({
               event: 'Inquiry',
               conversionId: 'a2_grug5w52ci7y',
@@ -86,6 +84,7 @@ function InquiryForm() {
                 name: formData.email,
               }],
             });
+            console.log(window.dataLayer);
           }
         } else {
           throw new Error('Failed to submit inquiry');
@@ -107,7 +106,7 @@ function InquiryForm() {
       <h3 className="InquiryFormHeader">Interested? Get in touch with us</h3>
       {successMessage && <div className="SuccessMessage">{successMessage}</div>}
       {errorMessage && <div className="ErrorMessage">{errorMessage}</div>}
-      <form className="InquiryForm" onSubmit={handleSubmit}>
+      <form className="InquiryForm">
         <label>
           <p className="FormLabel">Name:</p>
           <input type="text" name="name" value={formData.name} onChange={handleChange} maxLength="1000" required />
@@ -141,7 +140,7 @@ function InquiryForm() {
           <textarea name="message" value={formData.message} onChange={handleChange} rows="4" maxLength="1000" />
         </label>
 
-        <button type="submit">Submit</button>
+        <button type="button" onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );
